@@ -1,4 +1,4 @@
-IoTBay project
+#IoTBay project
 Contributors:
 - Chunchao Zhan
 - Etta Wu
