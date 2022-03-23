@@ -24,7 +24,7 @@ body{
 .lg_cb{
     display:inline-block;
     width: 400px;
-    height: 450px;
+    height: 500px;
     border-radius: 30px;
     background-color: rgba(36, 36, 36, 0.8);
     box-shadow:0 0 10px gray;
@@ -110,7 +110,7 @@ body{
     background-color: rgba(36, 36, 36, 0.8);
     color:white;
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
     cursor: pointer;
 }
 .lg_cb_btn:hover{

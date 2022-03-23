@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="Login.css">
+        <link type="text/css" rel="stylesheet" href="Login.css">
         <title>Login Page</title>
     </head>
     <body>
@@ -29,8 +29,8 @@
                 <a class="lg_cb_su" href="../RegisterPage/Register.jsp">Sign up</a>
                 <br/>
                 <input class="lg_cb_btn" type="submit" value="Login"/>
-                <br/>
             </form>
+            <button class="lg_cb_btn" onclick="window.location.href='../WelcomePage/Welcome.jsp'"/>Anonymous</button>
         </div>
     </body>
 </html>
