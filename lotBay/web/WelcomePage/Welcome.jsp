@@ -1,3 +1,7 @@
+<%-- 
+    Document   : Welcome
+    Author     : chunchao zhan, yunwei zhang
+--%>
 <!DOCTYPE html>
 <html>
 <head>
