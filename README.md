@@ -8,7 +8,10 @@ Contributors:
 - Jingsong Pang
 - Songwen Hua
 
+
 Process:
+
+
   **Front-end:**
   -Index `Done`
   -Login `Done`
@@ -16,6 +19,7 @@ Process:
   -Login `Done`
   -Mainpage `InProcess`
   -LogoutPage `InProcess`
+  
   
   **Back-end:**
   -UserBean `Done`
