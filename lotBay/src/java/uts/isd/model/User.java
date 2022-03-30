@@ -6,7 +6,7 @@ package uts.isd.model;
 
 /**
  *
- * @author zhang
+ * @author yunwei zhang
  */
 public class User {
     private String Username;
