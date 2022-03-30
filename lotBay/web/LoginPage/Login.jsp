@@ -30,7 +30,6 @@
                 <br/>
                 <input class="lg_cb_btn" type="submit" value="Login"/>
             </form>
-            <button class="lg_cb_btn" onclick="window.location.href='../WelcomePage/Welcome.jsp'"/>Anonymous</button>
         </div>
     </body>
 </html>
