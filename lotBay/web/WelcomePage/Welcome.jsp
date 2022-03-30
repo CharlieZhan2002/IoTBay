@@ -14,6 +14,7 @@
 	<main>
 		<header>
 			<img src="img/logo.jpg">
+                        <div></div>
 		</header>
 		<div class="content">
 			<section>
