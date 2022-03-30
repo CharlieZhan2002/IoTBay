@@ -1,7 +1,7 @@
 <%-- 
     Document   : index2
     Created on : 30/03/2022, 12:22:53 PM
-    Author     : K
+    Author     : mengjiao wang
 --%>
 
 <html>
@@ -18,13 +18,10 @@
         <div class="lg_cb">
             <p class="lg_cb_tit">Index Page</p>
             <p class="lg_cb_subtit"> Dear Customer, you can choose register, login or anonymous button below</p>
-            <p class="lg_cb_subtit"> Have a Good Day!</p>
-            <form>
-            <button class="lg_cb_btn" onclick="window.location.href='Register.jsp'"/>Register</button>
-        </form>
-        <button class="lg_cb_btn" onclick="window.location.href='Login.jsp'"/>Login</button>
-        <form>
-        <button class="lg_cb_btn" onclick="window.location.href='Welcome.jsp'"/>Anonymous user</button>
-        </form>
+            <p class="lg_cb_subtit" style="margin-bottom: 10px"> Have a Good Day!</p>
+   
+        <button class="lg_cb_btn" onclick="window.location.href='../RegisterPage/Register.jsp'"/>Register</button><br/>
+        <button class="lg_cb_btn" onclick="window.location.href='../LoginPage/Login.jsp'"/>Login</button><br/>
+        <button class="lg_cb_btn" onclick="window.location.href='../WelcomePage/Welcome.jsp'"/>Anonymous user</button>
         </div>
        
