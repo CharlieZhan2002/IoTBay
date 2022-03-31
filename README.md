@@ -22,9 +22,9 @@ Process:
   
   -Login `Done`
   
-  -Mainpage `InProcess`
+  -Mainpage `Done`
   
-  -LogoutPage `InProcess`
+  -LogoutPage `Done`
   
   
   **Back-end:**
