@@ -4,8 +4,8 @@
     Author     : 12717
 --%>
 
+<%@page import="uts.isd.model.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="Java.CustomerBean"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,12 +20,12 @@
         <h1 class = "m_cb_tit">Welcome to Main page</h1></br>
          <div class = "m_cb"></h1></br></br></br>
          <%
-            CustomerBean customer = (CustomerBean)session.getAttribute("customer");
+            User user = (User)session.getAttribute("user");
         %>
          <br/>
-         <h1 class = "m_cb_subtit">Welcome, ${customer.fullName}</h1>
-         <p class = "m_cb_subtit"> You have logged in with email: ${customer.email}</P>
-         <p class = "m_cb_subtit"> Your date of birth is ${customer.dateOfBirth}</p>
+         <h1 class = "m_cb_subtit">Welcome, ${user.getUsername()}</h1>
+         <p class = "m_cb_subtit"> You have logged in with email: ${user.getUseremail()}</P>
+         <p class = "m_cb_subtit"> Your date of birth is ${user.getUserdob()}</p>
          <br/>
          <a class="m_cb_bk" href="../LogoutPage/Logout.jsp">Logout</a>
          </<div>
