@@ -2,6 +2,8 @@
     Document   : Welcome
     Author     : chunchao zhan, yunwei zhang
 --%>
+
+<%@page import="uts.isd.model.User"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +28,11 @@
 					<h1 align="center">IoTbay</h1>
 					<h2 align="center">Welcome! 
                                             <%
+                                                String name = request.getParameter("fullname");
+                                                String dob = request.getParameter("dateofbirth");
+                                                String password = request.getParameter("password");
                                                 String useremail =  request.getParameter("email");
-                                            %><%= (useremail != null) ? useremail:""%></h2>
+                                            %><%= (useremail != null) ? useremail: "Anonymous User"%></h2>
 				</header>
 				<p>
 					IoTBay has a wide range collection of devices and sensors (Refer to IoT websites to acquire devices and sensors listings. I.E: https://tutorials-raspberrypi.com/raspberry-pi-sensors-overview-50-important-components/). IoTBay sells these devices in their Sydney store to their customers. IoTBay aims to improve their business portfolio and provides customers with the option of purchasing the IoT devices online. There is a wide range of online stores nowadays selling similar IoT devices; therefore the IoTBay aims to purchase a competitive web application that provides user-friendly and effective interface to customers.
@@ -39,7 +44,7 @@
 
 				<ul>
 					<li>
-						<a href="window.location.href='../MainPage/main.jsp'" target="_blank"><h2  align="center">Begin</h2></a>
+						<a href='../MainPage/Main.jsp' target="_blank"><h2  align="center">Begin</h2></a>
 						<article>
 							<p>Please follow us</p>
 							<time datetime="2022-03-31">1 Hour ago</time>
@@ -60,9 +65,6 @@
 	</main>
 </body>
         <%
-            String name = request.getParameter("fullname");
-            String dob = request.getParameter("dateofbirth");
-            String password = request.getParameter("password");
             User user = new User(name, useremail, password, dob);
             session.setAttribute("user", user);
         %>

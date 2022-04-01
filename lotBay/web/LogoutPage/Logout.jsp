@@ -16,7 +16,7 @@
     </head>
     <body>
         <form action="../index page/index.jsp" method="get">
-        <h1 class="lg_cb_tit">Logout successed</h1><br/>
+        <h1 class="lg_cb_tit">Logout successed</h1><br/><br/>
         <div class="lg_cb"><br/><br/><br/><br/>
         <p class="lg_cb_subtit">Thank you for using the system</p>
         <p class="lg_cb_subtit">Please click the buttom in below to back to index page.</p></br>
