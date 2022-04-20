@@ -1,5 +1,9 @@
 #IoTBay project
 
+SQL:
+username: root
+password: 123456
+
 Contributors:
 - Chunchao Zhan
 - Etta Wu
