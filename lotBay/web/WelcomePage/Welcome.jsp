@@ -65,7 +65,8 @@
 	</main>
 </body>
         <%
-            User user = new User(name, useremail, password, dob);
+            //need to edit
+            User user = new User("null", "null", useremail, "null", dob, password, "null", "null");
             session.setAttribute("user", user);
         %>
 </html>
