@@ -2,7 +2,7 @@ package uts.isd.model.dao;
 
 import java.sql.*;
 import uts.isd.model.User;
-
+import uts.isd.model.Product;
 /* 
 * DBManager is the primary DAO class to interact with the database. 
 * Complete the existing methods of this classes to perform CRUD operations with the db.
@@ -16,11 +16,11 @@ public DBManager(Connection conn) throws SQLException {
    st = conn.createStatement();   
 }
 
-//Find user by email and password in the database   
+//Find user by id  
 public User findUser(String id) throws SQLException {       
-   String fetch = "SELECT * FROM ROOT.USER WHERE USERID = '"+ id +"'";  
+   String fetch = "SELECT * FROM ROOT.USERS WHERE USERID = '"+ id +"'";  
    ResultSet rs = st.executeQuery(fetch); 
-   
+
    while(rs.next()){
        String userid = rs.getString(8);
        if(userid .equals(id)){
@@ -36,7 +36,6 @@ public User findUser(String id) throws SQLException {
    }
    return null;   
 }
-
 //Add a user-data into the database   
 public void addUser(String FirstName, String LastName, String Email, String Gender, String DoB, String Password, String Type, String UserId) throws SQLException {                   //code for add-operation       
   st.executeUpdate("INSERT INTO ROOT.USERS VALUES('"+ FirstName +" ','"+ LastName +" ','"+ Email +" ','"+ Gender +"','"+ DoB +" ','"+ Password +"','"+ Type +"','"+ UserId +"')");   
@@ -55,7 +54,26 @@ public void deleteUser(String UserId) throws SQLException{
    st.executeUpdate("DELETE FROM ROOT.USERS WHERE USERID='" + UserId + "'"); 
 }
 
+//Find user by id  
+public Product[] getProducts() throws SQLException {   
+   String fetch = "SELECT * FROM ROOT.PRODUCT";  
+   ResultSet rs = st.executeQuery(fetch);
+   //int count = 0;
+   //while(rs2.next()){count++;}
+   Product [] res = new Product[100];
+   int i = 0;
+   while(rs.next()){
+       res[i] = new Product(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+       i++;
+   }
+   i=0;
+   System.out.println(res[0].getPname());
+   return res;   
+}
 
+public void addProducts(String pid, String pname, String type, String price, String quantity) throws SQLException {                   //code for add-operation       
+  st.executeUpdate("INSERT INTO ROOT.PRODUCT VALUES('"+ pid +" ','"+ pname +" ','"+ type +" ','"+ price +"','"+ quantity +"')");   
+}
  
 
 }
