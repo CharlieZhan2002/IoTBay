@@ -1,0 +1,121 @@
+::-webkit-scrollbar { width:0px; height:0px; }
+body{
+    background: url('Img_login_bg.jpg') no-repeat center center fixed;
+    text-align: center;
+}
+.lg_tit{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: default;
+    animation-duration: 1.5s;
+    animation-name: ani1;
+}
+@keyframes ani1 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+.lg_cb{
+    display:inline-block;
+    width: 400px;
+    height: 440px;
+    border-radius: 30px;
+    background-color: rgba(36, 36, 36, 0.8);
+    box-shadow:0 0 10px gray;
+    animation-duration: 1.5s;
+    animation-name: ani2;
+}
+@keyframes ani2 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        background-color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+.lg_cb_tit{
+    margin-bottom: 0px;
+    color: white;
+    font-size: 28px;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: default;
+}
+.lg_cb_subtit{
+    color: white;
+    font-size: 15px;
+    cursor: default;
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 35px;
+}
+.lg_cb_iptit{
+    color: white;
+    text-align: left;
+    margin-left: 80px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 10px;
+}
+.lg_cb_ip{
+    text-align: center;
+    width: 250px;
+    height:28px;
+    border-radius: 20px;
+    border:2px solid rgb(1, 72, 204);
+    background-color: rgba(36, 36, 36, 0.8);
+    color:#999999;
+}
+.lg_cb_ip:hover{
+    border:2px solid white;
+}
+.lg_cb_fp{
+    color: white;
+    font-size: 14px;
+    cursor:pointer;
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.lg_cb_fp:hover{
+    color:gray;
+}
+.lg_cb_su{
+    color: white;
+    font-size: 14px;
+    cursor:pointer;
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+.lg_cb_su:hover{
+    color:gray;
+}
+.lg_cb_btn{
+    text-align: center;
+    font-size: 17px;
+    width: 150px;
+    height:44px;
+    border-radius: 20px;
+    border:2px solid green;
+    background-color: rgba(36, 36, 36, 0.8);
+    color:white;
+    margin-top: 25px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+.lg_cb_btn:hover{
+    background-color: rgba(4, 105, 4, 0.466);
+}
+
+
+
