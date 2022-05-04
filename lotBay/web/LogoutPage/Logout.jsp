@@ -15,8 +15,9 @@
         <link type="text/css" rel="stylesheet" href="Logout.css">
     </head>
     <body>
-        <form action="../index page/index.jsp" method="get">
-        <h1 class="lg_cb_tit">Logout successed</h1><br/><br/>
+        <!<!-- ../index page/index.jsp -->
+        <form action="../LogoutServlet" method="post">
+        <h1 class="lg_cb_tit">Logout successed</h1><br/>
         <div class="lg_cb"><br/><br/><br/><br/>
         <p class="lg_cb_subtit">Thank you for using the system</p>
         <p class="lg_cb_subtit">Please click the buttom in below to back to index page.</p></br>

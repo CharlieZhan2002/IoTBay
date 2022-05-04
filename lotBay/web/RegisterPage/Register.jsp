@@ -15,12 +15,12 @@
         <title>Register Page</title>
     </head>
     <body>
-        <h1 class="r_tit">Welcome to IoTBay System</h1>
+        <h1 class="r_tit">Welcome to IoTBays System</h1>
         <br/>
         <div class="r_cb">
             <p class="r_cb_tit">Register</p>
             <p class="r_cb_subtit">Please Enter Your Details To Sign Up</p>
-            <form action="../WelcomePage/Welcome.jsp" method="post">
+            <form action="RegisterServlet" method="post" enctype="multipart/form-data" class="form-horizontal">
                 <p class="r_cb_iptit">Your Email</p>
                 <input class="r_cb_ip" type="text" placeholder="Email" name="email" required="true">
                 <p class="r_cb_iptit">Your Full Name</p>
