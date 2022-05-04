@@ -75,5 +75,14 @@ public void addProducts(String pid, String pname, String type, String price, Str
   st.executeUpdate("INSERT INTO ROOT.PRODUCT VALUES('"+ pid +" ','"+ pname +" ','"+ type +" ','"+ price +"','"+ quantity +"')");   
 }
  
+public void deleteProducts(String pid) throws SQLException{       
+   //code for delete-operation   
+   st.executeUpdate("DELETE FROM ROOT.PRODUCT WHERE PID='" + pid + "'"); 
+}
+
+public void updateProducts(String pid, String pname, String type, String price, String quantity) throws SQLException {       
+   //code for update-operation   
+   st.executeUpdate("UPDATE ROOT.PRODUCT SET PID='" + pid + "',PNAME='"+ pname +"',TYPE='"+ type +"',PRICE='"+ price +"',QUANTITY='"+ quantity +"'WHERE PID='"+ pid +"'"); 
+}   
 
 }

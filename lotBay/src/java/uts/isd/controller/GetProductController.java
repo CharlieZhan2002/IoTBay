@@ -14,8 +14,8 @@ public static void main(String[] args) {
         Connection conn = connector.openConnection();
         DBManager db = new DBManager(conn);
 
-        //db.getProducts();
-        //db.addProducts("2","aa","no","2","4");
+        //deletepdata("1");
+        //updatepdata("2","aa","no","2","4");
         //addprodata("3","aa","no","2","4");
 
         connector.closeConnection();
@@ -46,6 +46,27 @@ public static void addpdata(String pid, String pname, String type, String price,
     
         connector.closeConnection();
     }
+
+public static void deletepdata(String pid) throws ClassNotFoundException, SQLException{
+        DBConnector connector = new DBConnector();
+        Connection conn = connector.openConnection();
+        DBManager db = new DBManager(conn);
+
+        db.deleteProducts(pid);
+    
+        connector.closeConnection();
+    }
+
+public static void updatepdata(String pid, String pname, String type, String price, String quantity) throws ClassNotFoundException, SQLException{
+        DBConnector connector = new DBConnector();
+        Connection conn = connector.openConnection();
+        DBManager db = new DBManager(conn);
+
+        db.updateProducts(pid,pname,type,price,quantity);
+    
+        connector.closeConnection();
+    }
+
 }
 
 

@@ -45,6 +45,7 @@
 				<ul>
 					<li>
 						<a href='../MainPage/Main.jsp' target="_blank"><h2  align="center">Begin</h2></a>
+                                                <a href='../ShowProductPage/ShowProduct.jsp' target="_blank"><h2  align="center">Purchase Product</h2></a>
 						<article>
 							<p>Please follow us</p>
 							<time datetime="2022-03-31">1 Hour ago</time>

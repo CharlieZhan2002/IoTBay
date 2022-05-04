@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ProductCreate
-    Created on : 2022年4月29日, 上午7:36:30
+    Document   : ShowProduct
+    Created on : 2022年5月5日, 上午4:00:39
     Author     : yunwei zhang
 --%>
 
@@ -13,10 +13,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="ProductCreate.css">
-        <title>ProductCreate Page</title>
+        <link rel="stylesheet" href="ShowProduct.css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -52,24 +51,7 @@
             %>   
             </table>
             </div>
-            <form action="ProductCreateDone.jsp" method="post"><div class="pc_add_cb">
-                <table class="pc_add_tb">            
-                        <tr>
-                        <td style="width: 10%"><input style="width: 90%" name="pid" placeholder="Id" required="true"/></td>
-                        <td style="width: 30%"><input style="width: 90%" name="pname" placeholder="Product Name" required="true"/></td>
-                        <td style="width: 30%"><input style="width: 90%" name="type" placeholder="Product Type" required="true"/></td>
-                        <td style="width: 15%"><input style="width: 90%" name="price" placeholder="Price" required="true"/></td>
-                        <td style="width: 15%"><input style="width: 90%" name="quantity" placeholder="Quantity" required="true"/></td>    
-                    </tr>      
-                </table>
-            </div>
-                <button class="pc_cb_btn" type="submit">Add new product</button>
-            </form> 
-            <a class="pc_btn_dou" href="ProductDelete.jsp">Delete</a>
-            <a class="pc_btn_dou" href="ProductUpdate.jsp">Edit</a>
-            <br/>
-            <a class="pc_cb_bk">Back</a>
+            <a class="pc_cb_bk" href='../WelcomePage/Welcome.jsp'>Back</a>
         </div>
     </body>
-
 </html>
