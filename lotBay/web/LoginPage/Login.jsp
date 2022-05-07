@@ -28,7 +28,7 @@
                 <p class="lg_cb_fp">Forgot Password?</p>
                 <a class="lg_cb_su" href="../RegisterPage/Register.jsp">Sign up</a>
                 <br/>
-                <input class="lg_cb_btn" type="submit" value="LOGIN"/>
+                <input class="lg_cb_btn" type="submit" value="Log-in"/>
             </form>
         </div>
     </body>

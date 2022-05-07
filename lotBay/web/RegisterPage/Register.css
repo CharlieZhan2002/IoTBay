@@ -103,3 +103,10 @@ body{
 .r_cb_bk:hover{
     color:gray;
 }
+.r_cb_er{
+    text-align: center;
+    font-size: 17px;
+    color:white;
+    cursor: default;
+    margin-top: 30px;
+}

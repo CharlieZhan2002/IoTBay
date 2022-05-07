@@ -27,8 +27,8 @@
                 <input class="r_cb_ip" type="text" placeholder="Full Name" name="fullname" required="true">
                 <p class="r_cb_iptit">Your Password</p>
                 <input class="r_cb_ip" type="password" placeholder="Password" name="password" required="true">
-                <p class="r_cb_iptit">Your Date Of Birth</p>
-                <input class="r_cb_ip" type="date" name="dateofbirth" required="true">
+                <p class="r_cb_iptit">Your Phone Number</p>
+                    <input class="r_cb_ip" type="text" placeholder = "Phone Number"name="Phone Number" required="true">
                 <input class="r_cb_btn" type="submit" value="Register"/>
                 <a class="r_cb_bk" href="../LoginPage/Login.jsp">Back to Login</a>
             </form>

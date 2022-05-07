@@ -27,7 +27,7 @@
         <br/>
         <div class="pc_cb">
             <p class="pc_cb_tit">Create Product</p>
-            <p class="pc_dn">You Have Successfully Rmoved Item</p>
+            <p class="pc_dn">You Have Successfully Removed Item</p>
             <button class="pc_cb_btn" onclick="location.href ='ProductCreate.jsp'">Back</button>
         </div>
     </body>
