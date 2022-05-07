@@ -26,7 +26,7 @@
                 <p class="r_cb_iptit">Your Full Name</p>
                 <input class="r_cb_ip" type="text" placeholder="Full Name" name="fullname" required="true">
                 <p class="r_cb_iptit">Your Password</p>
-                <input class="r_cb_ip" type="password" placeholder="Password" name="fullname" required="true">
+                <input class="r_cb_ip" type="password" placeholder="Password" name="password" required="true">
                 <p class="r_cb_iptit">Your Date Of Birth</p>
                 <input class="r_cb_ip" type="date" name="dateofbirth" required="true">
                 <input class="r_cb_btn" type="submit" value="Register"/>

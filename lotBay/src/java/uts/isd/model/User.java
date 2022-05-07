@@ -9,49 +9,89 @@ package uts.isd.model;
  * @author yunwei zhang
  */
 public class User {
-    private String Username;
-    private String Useremail;
-    private String Userpassword;
-    private String Userdob;
+   private String FirstName;
+    private String LastName;
+    private String Email;
+    private String Gender;
+    private String DoB;
+    private String Password;
+    private String Type;
+    private String UserId;
 
-    public User(String Username, String Useremail, String Userpassword, String Userdob) {
-        this.Username = Username;
-        this.Useremail = Useremail;
-        this.Userpassword = Userpassword;
-        this.Userdob = Userdob;
+    public User(String FirstName, String LastName, String Email, String Gender, String DoB, String Password, String Type, String UserId) {
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.Email = Email;
+        this.Gender = Gender;
+        this.DoB = DoB;
+        this.Password = Password;
+        this.Type = Type;
+        this.UserId = UserId;
     }
 
-    public String getUsername() {
-        return Username;
+    public String getFirstName() {
+        return FirstName;
     }
 
-    public void setUsername(String Username) {
-        this.Username = Username;
+    public void setFirstName(String FirstName) {
+        this.FirstName = FirstName;
     }
 
-    public String getUseremail() {
-        return Useremail;
+    public String getLastName() {
+        return LastName;
     }
 
-    public void setUseremail(String Useremail) {
-        this.Useremail = Useremail;
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
     }
 
-    public String getUserpassword() {
-        return Userpassword;
+    public String getEmail() {
+        return Email;
     }
 
-    public void setUserpassword(String Userpassword) {
-        this.Userpassword = Userpassword;
+    public void setEmail(String Email) {
+        this.Email = Email;
     }
 
-    public String getUserdob() {
-        return Userdob;
+    public String getGender() {
+        return Gender;
     }
 
-    public void setUserdob(String Userdob) {
-        this.Userdob = Userdob;
+    public void setGender(String Gender) {
+        this.Gender = Gender;
     }
-    
-    
+
+    public String getDoB() {
+        return DoB;
+    }
+
+    public void setDoB(String DoB) {
+        this.DoB = DoB;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    public String getType() {
+        return Type;
+    }
+
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    public String getUserId() {
+        return UserId;
+    }
+
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+   
 }

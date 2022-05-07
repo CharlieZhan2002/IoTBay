@@ -21,12 +21,12 @@
          <div class = "m_cb"></h1></br></br></br>
          <%
             User user = (User)session.getAttribute("user");
-            String username = user.getUsername();
-            String useremail = user.getUseremail();
-            String userdob = user.getUserdob();
+            String userlastname = user.getLastName();
+            String useremail = user.getEmail();
+            String userdob = user.getDoB();
          %>
          <br/>
-         <h1 class = "m_cb_subtit">Welcome, <b><%= (username != null) ? username: "Unknown User Name"%></b></h1>
+         <h1 class = "m_cb_subtit">Welcome, <b><%= userlastname %></b></h1>
          <p class = "m_cb_subtit"> You have logged in with email:<b><%= (useremail != null) ? useremail: "Unknown User Email"%></b></P>
          <p class = "m_cb_subtit"> Your date of birth is <b><%= (userdob != null) ? userdob: "Unknown User Date of Birth"%></b></p>
          <br/>
