@@ -3,6 +3,8 @@ package uts.isd.model.dao;
 import java.sql.*;
 import uts.isd.model.User;
 import uts.isd.model.Product;
+import uts.isd.model.Staff;
+import uts.isd.model.Customer;
 /* 
 * DBManager is the primary DAO class to interact with the database. 
 * Complete the existing methods of this classes to perform CRUD operations with the db.
