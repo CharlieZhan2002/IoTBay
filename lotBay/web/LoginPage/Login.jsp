@@ -4,6 +4,10 @@
     Author     : yunwei zhang, etta wu
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="uts.isd.model.*"%>
+<%@page import="uts.isd.model.dao.*"%>
+<%@page import="uts.isd.controller.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
