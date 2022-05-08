@@ -12,3 +12,9 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay
 数据库类加载程序已启动 - derby.database.classpath=''
+----------------------------------------------------------------
+Sun May 08 23:11:12 AEST 2022：正在关闭 Derby 引擎
+----------------------------------------------------------------
+Sun May 08 23:11:12 AEST 2022:
+正在使用类加载程序 jdk.internal.loader.ClassLoaders$AppClassLoader@70dea4e 关闭数据库目录 D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay\db 上的实例 a816c00e-0180-a3c8-67e9-ffffe0f8d0b1
+----------------------------------------------------------------
