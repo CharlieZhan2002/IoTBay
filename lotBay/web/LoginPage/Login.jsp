@@ -19,9 +19,12 @@
         <title>Login Page</title>
     </head>
     <body>
+       
+         
         <h1 class="lg_tit">Welcome to IoTBay System</h1>
         <br/>
         <div class="lg_cb">
+                
             <p class="lg_cb_tit">Log-in</p>
             <p class="lg_cb_subtit">Please enter your Username and Password</p>
             <form action="../WelcomePage/Welcome.jsp" method="post">
@@ -34,6 +37,7 @@
                 <br/>
                 <input class="lg_cb_btn" type="submit" value="Log-in"/>
             </form>
+                
         </div>
     </body>
 </html>
