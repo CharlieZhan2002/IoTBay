@@ -54,6 +54,29 @@ public void deleteUser(String UserId) throws SQLException{
    st.executeUpdate("DELETE FROM ROOT.USERS WHERE USERID='" + UserId + "'"); 
 }
 
+
+
+
+
+
+
+
+public Product findProducts(String id) throws SQLException {       
+   String fetch = "SELECT * FROM ROOT.PRODUCT WHERE PID = '"+ id +"'";  
+   ResultSet rs = st.executeQuery(fetch); 
+   
+   while(rs.next()){
+       String userid = rs.getString(1).replaceAll(" ","");
+       if(userid.equals(id)){
+           String pname = rs.getString(2);
+           String ptype = rs.getString(3);
+           String price = rs.getString(4);
+           String quantity = rs.getString(5);
+           return new Product(userid, pname,ptype,price,quantity);
+       }
+   }
+   return null;   
+}
 //Find user by id  
 public Product[] getProducts() throws SQLException {   
    String fetch = "SELECT * FROM ROOT.PRODUCT";  
