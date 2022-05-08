@@ -9,18 +9,28 @@ package uts.isd.model;
  * @author ettas
  */
 public class Customer {
+    private String CustID;
     private String CustFullName;
     private String CustEmail;
     private String CustPwd;
     private String CustShippingAddr;
-    private int CustMobNo; 
+    private String CustMobNo; 
    
-  public Customer (String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, int CustMobNo){
+  public Customer (String CustID, String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustMobNo){
+      this.CustID = CustID;
       this.CustFullName = CustFullName;
       this.CustEmail = CustEmail;
       this.CustPwd = CustPwd;
       this.CustShippingAddr = CustShippingAddr;
       this.CustMobNo = CustMobNo;
+  }
+  
+  public String getCustID(){
+      return CustID;
+  }
+  
+  public void setCustID(String CustID){
+      this.CustID = CustID;
   }
   
   public String getCustFullName(){
@@ -55,11 +65,11 @@ public class Customer {
       this.CustShippingAddr = CustShippingAddr;
   }
   
-  public int getCustMobNo(){
+  public String getCustMobNo(){
       return CustMobNo;
   }
   
-  public void setCustMobNo(int CustMobNo){
+  public void setCustMobNo(String CustMobNo){
       this.CustMobNo = CustMobNo;
   }
   

@@ -9,16 +9,26 @@ package uts.isd.model;
  * @author ettas
  */
 public class Staff {
+    private String StaffID;
     private String StaffFullName;
     private String StaffEmail;
     private String StaffPwd;
-    private int StaffMobNo;
+    private String StaffMobNo;
    
-  public Staff (String StaffFullName, String StaffEmail, String StaffPwd, int StaffMobNo){
+  public Staff (String StaffID, String StaffFullName, String StaffEmail, String StaffPwd, String StaffMobNo){
+      this.StaffID = StaffID;
       this.StaffFullName = StaffFullName;
       this.StaffEmail = StaffEmail;
       this.StaffPwd = StaffPwd;
       this.StaffMobNo = StaffMobNo;
+  }
+  
+  public String getStaffID(){
+      return StaffID; 
+  }
+  
+  public void setStaffID(String StaffID){
+      this.StaffID = StaffID;
   }
   
   public String getStaffFullName(){
@@ -45,11 +55,11 @@ public class Staff {
       this.StaffPwd = StaffPwd;
   }
  
-  public int getStaffMobNo(){
+  public String getStaffMobNo(){
       return StaffMobNo;
   }
   
-  public void setStaffMobNo(int StaffMobNo){
+  public void setStaffMobNo(String StaffMobNo){
       this.StaffMobNo = StaffMobNo;
   }
 }
