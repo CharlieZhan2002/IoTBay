@@ -1,8 +1,8 @@
-Sat May 07 04:07:19 AEST 2022 : Apache Derby 网络服务器 - 10.14.2.0 - (1828579) 已启动并准备接受端口 1527 上的连接
+Sun May 08 20:00:48 AEST 2022 : Apache Derby 网络服务器 - 10.14.2.0 - (1828579) 已启动并准备接受端口 1527 上的连接
 ----------------------------------------------------------------
-Sat May 07 04:07:19 AEST 2022:
+Sun May 08 20:01:14 AEST 2022:
 正在使用类加载程序 jdk.internal.loader.ClassLoaders$AppClassLoader@70dea4e 引导数据库
-目录 D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay\db 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) 实例 a816c00e-0180-9a8e-00f2-ffffe0f8d0b1
+目录 D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay\db 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) 实例 a816c00e-0180-a31d-4cae-ffffe0f8d0b1
 已从 file:/C:/Program%20Files/Java/jdk-17.0.2/db-derby-10.14.2.0-bin/lib/derby.jar 加载
 java.vendor=Oracle Corporation
 java.runtime.version=17.0.2+8-LTS-86
@@ -12,6 +12,3 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay
 数据库类加载程序已启动 - derby.database.classpath=''
-警告：在从表删除行时，用聚集 ID 177 未在索引中找到基表行(9,10)的索引行。作为删除操作的一部分，此问题已自动改正。
-警告：在从表删除行时，用聚集 ID 177 未在索引中找到基表行(9,11)的索引行。作为删除操作的一部分，此问题已自动改正。
-警告：在从表删除行时，用聚集 ID 177 未在索引中找到基表行(9,12)的索引行。作为删除操作的一部分，此问题已自动改正。
