@@ -11,6 +11,7 @@ os.name=Windows 10
 os.arch=amd64
 os.version=10.0
 <<<<<<< HEAD
+<<<<<<< HEAD
 derby.system.home=D:\Uni stuff\ISD\IoTBay software\IoTBay\lotBay
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
@@ -20,9 +21,14 @@ Sun May 08 20:46:14 CST 2022:
 Shutting down instance a816c00e-0180-99c4-c7ac-00003f37f198 on database directory D:\Uni stuff\ISD\IoTBay software\IoTBay\lotBay\db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
 ----------------------------------------------------------------
 =======
+=======
+>>>>>>> parent of 18acd41 (modified db)
 derby.system.home=D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay
 数据库类加载程序已启动 - derby.database.classpath=''
 警告：在从表删除行时，用聚集 ID 177 未在索引中找到基表行(9,10)的索引行。作为删除操作的一部分，此问题已自动改正。
 警告：在从表删除行时，用聚集 ID 177 未在索引中找到基表行(9,11)的索引行。作为删除操作的一部分，此问题已自动改正。
 警告：在从表删除行时，用聚集 ID 177 未在索引中找到基表行(9,12)的索引行。作为删除操作的一部分，此问题已自动改正。
+<<<<<<< HEAD
+>>>>>>> parent of 18acd41 (modified db)
+=======
 >>>>>>> parent of 18acd41 (modified db)
