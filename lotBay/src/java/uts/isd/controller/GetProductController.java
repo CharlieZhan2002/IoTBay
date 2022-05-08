@@ -13,7 +13,8 @@ public static void main(String[] args) {
         DBConnector connector = new DBConnector();
         Connection conn = connector.openConnection();
         DBManager db = new DBManager(conn);
-
+        
+        //System.out.print(findpdata("2").getPname());
         //deletepdata("1");
         //updatepdata("2","aa","no","2","4");
         //addprodata("3","aa","no","2","4");
@@ -25,6 +26,17 @@ public static void main(String[] args) {
      }
 
 }
+
+public static Product findpdata(String pid) throws ClassNotFoundException, SQLException{
+        DBConnector connector = new DBConnector();
+        Connection conn = connector.openConnection();
+        DBManager db = new DBManager(conn);
+
+        Product res = db.findProducts(pid);
+  
+        connector.closeConnection();
+        return res;
+    }
 public Product[] getpdata() throws ClassNotFoundException, SQLException{
         DBConnector connector = new DBConnector();
         Connection conn = connector.openConnection();

@@ -128,9 +128,6 @@ body{
     font-size: 14px;
     cursor: default;
 }
-.pc_cb_tb_con_data:hover{
-    background-color: #fafafa;
-}
 .pc_add_cb{
     padding:10px;
     margin-top: 10px;
@@ -142,7 +139,19 @@ body{
     border-radius: 5px;
     height: 28px;
     border:0px solid;
-    
+}
+.pc_choose_btn{
+    width: 70px;
+    height: 20px;
+    border:0px solid;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 12px;
+}
+.pc_choose_btn:hover{
+    color:#fafafa;
+    background-color: black;
+    cursor: pointer;
 }
 
 
