@@ -1,8 +1,8 @@
-Sun May 08 20:00:48 AEST 2022 : Apache Derby 网络服务器 - 10.14.2.0 - (1828579) 已启动并准备接受端口 1527 上的连接
+Sun May 08 23:07:41 AEST 2022 : Apache Derby 网络服务器 - 10.14.2.0 - (1828579) 已启动并准备接受端口 1527 上的连接
 ----------------------------------------------------------------
-Sun May 08 20:01:14 AEST 2022:
+Sun May 08 23:07:41 AEST 2022:
 正在使用类加载程序 jdk.internal.loader.ClassLoaders$AppClassLoader@70dea4e 引导数据库
-目录 D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay\db 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) 实例 a816c00e-0180-a31d-4cae-ffffe0f8d0b1
+目录 D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay\db 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) 实例 a816c00e-0180-a3c8-67e9-ffffe0f8d0b1
 已从 file:/C:/Program%20Files/Java/jdk-17.0.2/db-derby-10.14.2.0-bin/lib/derby.jar 加载
 java.vendor=Oracle Corporation
 java.runtime.version=17.0.2+8-LTS-86
