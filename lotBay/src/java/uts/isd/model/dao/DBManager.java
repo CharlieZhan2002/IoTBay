@@ -3,6 +3,8 @@ package uts.isd.model.dao;
 import java.sql.*;
 import uts.isd.model.User;
 import uts.isd.model.Product;
+import uts.isd.model.Staff;
+import uts.isd.model.Customer;
 /* 
 * DBManager is the primary DAO class to interact with the database. 
 * Complete the existing methods of this classes to perform CRUD operations with the db.
@@ -36,9 +38,9 @@ public User findUser(String id) throws SQLException {
    }
    return null;   
 }
-//Add a user-data into the database   
-public void addUser(String FirstName, String LastName, String Email, String Gender, String DoB, String Password, String Type, String UserId) throws SQLException {                   //code for add-operation       
-  st.executeUpdate("INSERT INTO ROOT.USERS VALUES('"+ FirstName +" ','"+ LastName +" ','"+ Email +" ','"+ Gender +"','"+ DoB +" ','"+ Password +"','"+ Type +"','"+ UserId +"')");   
+//Add a customer-data into the database   
+public void addCustomer(int CustID, String CustFullName, String CustEmail, String CustPwd, int CustMobNo) throws SQLException {                   //code for add-operation       
+  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ CustID +" ','"+ CustFullName +" ','"+ CustEmail +" ','"+ CustPwd +"','"+ CustMobNo +"')");   
   //st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')");  
 }
 

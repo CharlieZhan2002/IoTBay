@@ -50,7 +50,7 @@ String password = in.nextLine();
 System.out.print("type: ");
 String type = in.nextLine();
 
-db.addUser( firstname, lastname,email,gender,dob,password,type,userid);
+//db.addUser( firstname, lastname,email,gender,dob,password,type,userid);
 //System.out.println(db.findUser("1").getFirstName());
 System.out.println("test item is added to the database.");
 
