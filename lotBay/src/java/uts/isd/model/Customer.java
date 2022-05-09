@@ -9,28 +9,26 @@ package uts.isd.model;
  * @author ettas
  */
 public class Customer {
-    private String CustID;
     private String CustFullName;
     private String CustEmail;
     private String CustPwd;
     private String CustShippingAddr;
     private String CustMobNo; 
+    private String CustAccess;
    
-  public Customer (String CustID, String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustMobNo){
-      this.CustID = CustID;
+  public Customer (String CustEmail, String CustPwd, String CustFullName, String CustMobNo){
+      this.CustEmail = CustEmail;
+      this.CustPwd = CustPwd;
+      this.CustFullName = CustFullName;
+      this.CustMobNo = CustMobNo; 
+  }
+  public Customer (String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustAccess, String CustMobNo){ 
       this.CustFullName = CustFullName;
       this.CustEmail = CustEmail;
       this.CustPwd = CustPwd;
       this.CustShippingAddr = CustShippingAddr;
-      this.CustMobNo = CustMobNo;
-  }
-  
-  public String getCustID(){
-      return CustID;
-  }
-  
-  public void setCustID(String CustID){
-      this.CustID = CustID;
+      this.CustAccess = CustAccess; 
+      this.CustMobNo = CustMobNo; 
   }
   
   public String getCustFullName(){
@@ -72,6 +70,26 @@ public class Customer {
   public void setCustMobNo(String CustMobNo){
       this.CustMobNo = CustMobNo;
   }
+  
+  public String getCustAccess (){
+      return CustAccess;
+  }
+  
+  public void setCustAccess(String CustAccess){
+      this.CustAccess = CustAccess;
+  }
+  
+  @Override
+    public String toString() {
+        return "Customer{" +
+                "CustFullName='" + CustFullName + '\'' +
+                ", CustEmail='" + CustEmail + '\'' +
+                ", CustPwd='" + CustPwd + '\'' +
+                ", CustShippingAddr='" + CustShippingAddr + '\'' +
+                ", CustAccess='" + CustAccess + '\'' +
+                ", CustMobNo='" + CustMobNo + '\'' +
+                '}';
+    }
   
 }
   

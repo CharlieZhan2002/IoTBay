@@ -21,27 +21,40 @@ public DBManager(Connection conn) throws SQLException {
 
 //-------------------Customer database ------------------------------
 //Find Customer by Email and Password   
-public Customer findCustomer(String CustEmail, String CustPwd) throws SQLException {       
-   String fetch = "SELECT * FROM ROOT.CUSTOMERS WHERE CUSTEMAILADDR = '"+ CustEmail + "' AND CUSTPWD = '" + CustPwd +"'";  
+public Customer findCustbyEmail(String CustEmail) throws SQLException {       
+   String fetch = "SELECT * FROM ROOT.CUSTOMERS WHERE CUSTEMAIL = '"+ CustEmail + "'";  
    ResultSet rs = st.executeQuery(fetch); 
 
    while(rs.next()){
-       String CEmail = rs.getString(3);
-       String CPwd = rs.getString(4);
-       if(CEmail .equalsIgnoreCase(CustEmail) && CPwd.equals(CustPwd)){
-          String CID = rs.getString(1);
-          String CFullName = rs.getString(2);
-          String CShipping = rs.getString(5);
-          String CMobNo = rs.getString(7);
-          
-           return new Customer(CID, CFullName, CEmail,CPwd,CShipping,CMobNo);
+          String CEmail = rs.getString(2);
+          String CPwd = rs.getString(3);
+          String CFullName = rs.getString(1);
+          String CMobNo = rs.getString(6);
+       if(CEmail .equalsIgnoreCase(CustEmail)){
+           return new Customer(CEmail,CPwd,CFullName,CMobNo);
+       }
+   }
+   return null;   
+}
+public Customer findCustomer(String CustEmail, String CustPwd) throws SQLException {       
+   String fetch = "SELECT * FROM ROOT.CUSTOMERS WHERE CUSTEMAIL = '"+ CustEmail + "' and CUSTPWD= '" + CustPwd +"'";  
+   ResultSet rs = st.executeQuery(fetch); 
+
+   while(rs.next()){
+          String CEmail = rs.getString(2);
+          String CPwd = rs.getString(3);
+          if(CEmail .equalsIgnoreCase(CustEmail) && CPwd.equals(CustPwd)){
+          String CFullName = rs.getString(1);
+          String CMobNo = rs.getString(6);
+       
+           return new Customer(CEmail,CPwd,CFullName,CMobNo);
        }
    }
    return null;   
 }
 //Add a customer-data into the database   
-public void addCustomer(int CustID, String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, int CustAccess, String CustMobNo) throws SQLException {                   //code for add-operation       
-  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ CustID +" ','"+ CustFullName +" ','"+ CustEmail +" ','"+ CustPwd +"', '"+ CustShippingAddr +"' ,'"+ CustMobNo +"')");   
+public void addCustomer(String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustAccess, String CustMobNo) throws SQLException {                   //code for add-operation       
+  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ CustFullName +" ','"+ CustEmail +" ','"+ CustPwd +"', '"+ CustShippingAddr +"' , '" + CustAccess +"',"+ CustMobNo +"')");   
   //st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')");  
 }
 
@@ -78,14 +91,15 @@ public ArrayList<Customer> fetchCustomers()throws SQLException{
     ResultSet rs = st.executeQuery(fetch);
     ArrayList<Customer> cust = new ArrayList();
     while (rs.next()){
-          String CEmail = rs.getString(3);
-          String CPwd = rs.getString(4);
-          String CID = rs.getString(1);
-          String CFullName = rs.getString(2);
-          String CShipping = rs.getString(5);
-          String CMobNo = rs.getString(7);
+        
+          String CFullName = rs.getString(1);
+          String CEmail = rs.getString(2);
+          String CPwd = rs.getString(3);
+          String CShipping = rs.getString(4);
+          String CAccess = rs.getString(5);
+          String CMobNo = rs.getString(6);
    
-          cust.add(new Customer(CID, CFullName, CEmail, CPwd, CShipping, CMobNo));
+          cust.add(new Customer(CFullName, CEmail, CPwd, CShipping, CAccess, CMobNo));
     }
     return cust;
 }
@@ -94,18 +108,18 @@ public ArrayList<Customer> fetchCustomers()throws SQLException{
 
 
 public Staff findStaff(String StaffEmail, String StaffPwd) throws SQLException {       
-   String fetch = "SELECT * FROM ROOT.STAFF WHERE CUSTEMAILADDR = '"+ StaffEmail + "' AND CUSTPWD = '" + StaffPwd +"'";  
+   String fetch = "SELECT * FROM ROOT.STAFF WHERE STAFFEMAIL = '"+ StaffEmail + "' AND STAFFPWD = '" + StaffPwd +"'";  
    ResultSet rs = st.executeQuery(fetch); 
 
    while(rs.next()){
-       String SEmail = rs.getString(3);
-       String SPwd = rs.getString(4);
+       String SEmail = rs.getString(2);
+       String SPwd = rs.getString(3);
        if(SEmail .equalsIgnoreCase(StaffEmail) && SPwd.equals(StaffPwd)){
           String SID = rs.getString(1);
-          String SFullName = rs.getString(2);
-          String SMobNo = rs.getString(6);
+          String SFullName = rs.getString(1);
+          String SMobNo = rs.getString(5);
           
-           return new Staff(SID, SFullName, SEmail, SPwd, SMobNo);
+           return new Staff(SFullName, SEmail, SPwd, SMobNo);
        }
    }
    return null;   
