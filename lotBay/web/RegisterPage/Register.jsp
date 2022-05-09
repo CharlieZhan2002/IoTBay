@@ -3,7 +3,9 @@
     Created on : 2022年3月23日, 下午5:35:07
     Author     : yunwei zhang
 --%>
-<%@page import = "uts.isd.mdoel.*" %>
+<%@page import="uts.isd.model.*"%>
+<%@page import="uts.isd.model.dao.*"%>
+<%@page import="uts.isd.controller.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,13 +16,7 @@
         <link rel="stylesheet" href="Register.css">
         <title>Register Page</title>
     </head>
-    <%
-        String existErr = (String) session.getAttribute("existErr");
-        String nameErr = (String) session.getAttribute("nameErr");
-        String emailErr = (String) session.getAttribute("emailErr");
-        String passErr = (String) session.getAttribute("passErr");
-        String phoneErr = (String) session.getAttribute("phoneErr");
-    %>
+    
     <body>
         <h1 class="r_tit">Welcome to IoTBay System</h1>
         <br/>
@@ -40,7 +36,7 @@
                 <input class="r_cb_btn" type="submit" value="Register"/>
                 <a class="r_cb_bk" href="../LoginPage/Login.jsp">Back to Login</a>
             </form>
-            <p><%= existErr != null? existErr : ""%></p>
+       
         </div>
     </body>
 </html>

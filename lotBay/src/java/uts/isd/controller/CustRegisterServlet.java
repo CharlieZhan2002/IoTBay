@@ -6,6 +6,7 @@ package uts.isd.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,7 +19,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import uts.isd.model.Customer;
-import uts.isd.model.dao.DBManager;
+import uts.isd.model.dao.*;
+import uts.isd.model.dao.DBConnector;
+import uts.isd.model.Product;
 
 /**
  *
@@ -31,12 +34,62 @@ public class CustRegisterServlet extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
+     * @param request
      * @param servlet request
      * @param servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
     @Override 
+    protected void doPost (HttpServletRequest request, HttpServletResponse response)
+       throws ServletException, IOException { 
+        try {
+            DBConnector connector = new DBConnector();
+            Connection conn = connector.openConnection();
+            DBManager db = new DBManager(conn);
+            String custRegEmail = request.getParameter("email");
+            System.out.println(custRegEmail);
+            
+            boolean emailExist = db.checkCustEmail(custRegEmail);
+            if (emailExist != true){
+                insert(request,response);
+                response.sendRedirect("../WelcomePage/Welcome.jsp");}
+            else {
+                response.sendRedirect("RegistrationError.jsp");
+            }
+        }
+        catch (SQLException ex) {
+        Logger.getLogger(CustRegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
+    }   catch (ClassNotFoundException ex) {
+        Logger.getLogger(CustRegisterServlet.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    }
+     private void insert(HttpServletRequest request, HttpServletResponse response) 
+       throws ClassNotFoundException, SQLException, IOException {
+        DBConnector connector = new DBConnector();
+        Connection conn = connector.openConnection();
+        DBManager db = new DBManager(conn);
+        
+         String regEmail = request.getParameter("email");
+         String regName = request.getParameter("fullname");
+         String regPwd = request.getParameter("password");
+         String regShippingAddr = request.getParameter("");
+         String regPhone = request.getParameter("phone");
+         String regAccess = request.getParameter("");
+         db.addCustomer(regEmail, regName, regPwd,regShippingAddr, regAccess, regPhone);
+         
+         connector.closeConnection();
+    }
+} 
+
+    
+    
+    
+    
+    
+    
+    
+   /* @Override 
     protected void doPost (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
@@ -82,5 +135,5 @@ public class CustRegisterServlet extends HttpServlet {
         validator.clear(session);
     
     }
-}
+}*/
    

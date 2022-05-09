@@ -40,7 +40,7 @@ public Customer findCustomer(String CustEmail, String CustPwd) throws SQLExcepti
    return null;   
 }
 //Add a customer-data into the database   
-public void addCustomer(String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, int CustAccess, String CustMobNo) throws SQLException {                   //code for add-operation       
+public void addCustomer(String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustAccess, String CustMobNo) throws SQLException {                   //code for add-operation       
   st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ CustFullName +" ','"+ CustEmail +" ','"+ CustPwd +"', '"+ CustShippingAddr +"' ,'"+ CustMobNo +"')");   
   //st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')");  
 }
@@ -72,7 +72,21 @@ public void deleteCust(String CustID) throws SQLException{
    st.executeUpdate("DELETE FROM ROOT.CUSTOMERS WHERE CUSTID='" + CustID + "'"); 
 }
 
-public Customer findCustEmail(String CustEmail) throws SQLException{
+public boolean checkCustEmail(String CustEmail) throws SQLException{
+    boolean check = false;
+    String fetch = "SELECT * FROM ROOT.CUSTOMERS WHERE CUSTEMAIL= '" + CustEmail +"'";
+    ResultSet rs = st.executeQuery(fetch);
+    while(rs.next()){
+        String checkEmail = rs.getString(3);
+        if (checkEmail != null){
+            check = true;
+            break;
+        }
+    }
+    return check;
+}
+
+/*public Customer findCustEmail(String CustEmail) throws SQLException{
     String fetch = "SELECT * FROM ROOT.CUSTOMERS WHERE CUSTEMAIL = '" + CustEmail +"'";
     ResultSet rs = st.executeQuery(fetch);
     
@@ -88,7 +102,7 @@ public Customer findCustEmail(String CustEmail) throws SQLException{
         }
     }
     return null;
-}
+}*/ 
 
 //fetch customers from customer database
 public ArrayList<Customer> fetchCustomers()throws SQLException{
