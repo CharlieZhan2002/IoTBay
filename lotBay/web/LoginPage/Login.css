@@ -82,7 +82,7 @@ body{
     font-style: italic;
     font-weight: 100;
     text-decoration: underline;
-    margin-top: 20px;
+    padding-top: 20px;
     margin-bottom: 20px;
 }
 .lg_cb_fp:hover{
@@ -96,6 +96,7 @@ body{
     font-weight: 100;
     text-decoration: underline;
     margin-bottom: 30px;
+    padding-bottom: 20px;
 }
 .lg_cb_su:hover{
     color:gray;

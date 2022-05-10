@@ -30,7 +30,7 @@
                 <p class="r_cb_iptit">Your Phone Number</p>
                     <input class="r_cb_ip" type="text" placeholder = "Phone Number"name="Phonenumber" required="true">
                 <input class="r_cb_btn" type="submit" value="Register"/>
-                <a class="r_cb_bk" href="../LoginPage/Login.jsp">Back to Login</a>
+                <a class="r_cb_bk" href="../index page/index.jsp">Back to index</a>
             </form>
         </div>
     </body>

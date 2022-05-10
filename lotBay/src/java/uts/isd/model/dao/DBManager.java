@@ -119,8 +119,29 @@ public ArrayList<Customer> fetchCustomers()throws SQLException{
 }
 
 // -------------------Staff-------------------------
+public boolean checkStaffByEmail(String StaffEmail) throws SQLException{
+    boolean isStaff = false;
+    String fetch = "SELECT * FROM ROOT.STAFF WHERE STAFFEMAIL = '" + StaffEmail +"'";
+    ResultSet rs = st.executeQuery(fetch);
+    while (rs.next()){
+        String staffCheck = rs.getString(2);
+        if(staffCheck != null){
+            isStaff = true;
+            break;
+        }
+    }
+    return isStaff;
+}
 
-
+public String checkAccess(String StaffEmail) throws SQLException{
+    String fetch = "SELECT STAFFACCESS FROM ROOT.STAFF WHERE STAFFEMAIL = '" + StaffEmail +"'";
+    ResultSet rs = st.executeQuery(fetch);
+    
+    String SAccess = rs.getString(4);
+    
+    return SAccess; 
+}
+      
 public Staff findStaff(String StaffEmail, String StaffPwd) throws SQLException {       
    String fetch = "SELECT * FROM ROOT.STAFF WHERE STAFFEMAIL = '"+ StaffEmail + "' AND STAFFPWD = '" + StaffPwd +"'";  
    ResultSet rs = st.executeQuery(fetch); 
@@ -129,7 +150,6 @@ public Staff findStaff(String StaffEmail, String StaffPwd) throws SQLException {
        String SEmail = rs.getString(2);
        String SPwd = rs.getString(3);
        if(SEmail .equalsIgnoreCase(StaffEmail) && SPwd.equals(StaffPwd)){
-          String SID = rs.getString(1);
           String SFullName = rs.getString(1);
           String SMobNo = rs.getString(5);
           
