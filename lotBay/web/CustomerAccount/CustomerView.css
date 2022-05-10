@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 11, 2022, 3:03:15 AM
+    Author     : ettas
+*/
+::-webkit-scrollbar { width:0px; height:0px; }
+body{
+    background: url('../LoginPage/Img_login_bg.jpg') no-repeat center center fixed;
+    text-align: center;
+}
+.cv_tit{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: default;
+    animation-duration: 1.5s;
+    animation-name: ani1;
+}
+@keyframes ani1 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+  .cv_cb{
+    padding: 15px;
+    display:inline-block;
+    width: 500px;
+    height: 550px;
+    border-radius: 30px;
+    background-color: rgba(36, 36, 36, 0.8);
+    box-shadow:0 0 10px gray;
+    animation-duration: 1.5s;
+    animation-name: ani2;
+}
+@keyframes ani2 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        background-color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+.cv_cb_tit{
+    margin-bottom: 0px;
+    color: white;
+    font-size: 28px;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: default;
+}
+
+.cv_cb_tb{
+   
+    height: 380px;
+    margin-top: 20px;
+   
+    padding:20px;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+.cv_cb_tb_con{
+    border:2px solid black;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cv_td_head{
+    text-align: centre;
+    font-size: 18px;
+    width:150px;
+    height: 70px;
+}
+.cv_td_con{
+    text-align: centre;
+    width: 300px;
+}
+.cv_cb_btn{
+    text-align: center;
+    font-size: 17px;
+    width: 150px;
+    height:44px;
+    border-radius: 20px;
+    border:2px solid green;
+    background-color: rgba(36, 36, 36, 0.8);
+    color:white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.cv_cb_btn:hover{
+    background-color: rgba(4, 105, 4, 0.466);
+}

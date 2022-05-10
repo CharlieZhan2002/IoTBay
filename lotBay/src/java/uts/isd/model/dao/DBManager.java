@@ -59,30 +59,30 @@ public void addCustomer(String CustFullName, String CustEmail, String CustPwd, S
 }
 
 //update a customer details in the database   
-public void updateCustName(String CustID, String CustFullName) throws SQLException {       
+public void updateCustName(String CustFullName , String CustEmail) throws SQLException {       
    //code for update-operation   
-   st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTFULLNAME='" + CustFullName + "' WHERE CUSTID='"+ CustID +"'"); 
+   st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTFULLNAME='" + CustFullName + "' WHERE CUSTEMAIL='"+ CustEmail +"'"); 
 } 
 
-public void updateCustEmail(String CustID, String CustEmail) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTEMAIL='" + CustEmail + "' WHERE CUSTID='" + CustID + "'");    
+public void updateCustEmail(String newCustEmail, String CustEmail) throws SQLException {
+    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTEMAIL='" + newCustEmail + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
 }
 
-public void updateCustPwd(String CustID, String CustPwd) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTPWD='" + CustPwd + "' WHERE CUSTID='" + CustID + "'");    
+public void updateCustPwd(String CustPwd, String CustEmail) throws SQLException {
+    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTPWD='" + CustPwd + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
 }
 
-public void updateCustShippingAddr(String CustID, String CustShippingAddr) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTSHIPPINGADDR='" + CustShippingAddr + "' WHERE CUSTID='" + CustID + "'");    
+public void updateCustShippingAdd(String CustShippingAdd, String CustEmail) throws SQLException {
+    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTSHIPPINGADD='" + CustShippingAdd + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
 }
 
-public void updateCustMobNo(String CustID, String CustMobNo) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTMOBNO='" + CustMobNo+ "' WHERE CUSTID='" + CustID + "'");   
+public void updateCustMobNo(String CustMobNo, String CustEmail) throws SQLException {
+    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTMOBNO='" + CustMobNo+ "' WHERE CUSTEMAIL='" + CustEmail + "'");   
 }
 //delete a customer from the database   
-public void deleteCust(String CustID) throws SQLException{       
+public void deleteCust(String CustEmail) throws SQLException{       
    //code for delete-operation   
-   st.executeUpdate("DELETE FROM ROOT.CUSTOMERS WHERE CUSTID='" + CustID + "'"); 
+   st.executeUpdate("DELETE FROM ROOT.CUSTOMERS WHERE CUSTEMAIL='" + CustEmail + "'"); 
 }
 
 public boolean checkCustEmail (String CustEmail) throws SQLException {
@@ -159,33 +159,33 @@ public Staff findStaff(String StaffEmail, String StaffPwd) throws SQLException {
    return null;   
 }
 //Add a customer-data into the database   
-public void addStaff(int StaffID, String StaffFullName, String StaffEmail, String StaffPwd, String StaffShippingAddr, int CustAccess, String StaffMobNo) throws SQLException {                   //code for add-operation       
-  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ StaffID +" ','"+ StaffFullName +" ','"+ StaffEmail +" ','"+ StaffPwd +"', '"+ StaffMobNo +"')");   
+public void addStaff(String StaffFullName, String StaffEmail, String StaffPwd, String StaffAccess, String StaffMobNo) throws SQLException {                   //code for add-operation       
+  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ StaffFullName +" ','"+ StaffEmail +" ','"+ StaffPwd +"', '" + StaffAccess + "', '"+ StaffMobNo +"')");   
   //st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')");  
 }
 
 //update a customer details in the database   
-public void updateStaffName(String StaffID, String StaffFullName) throws SQLException {       
+public void updateStaffName(String StaffFullName, String StaffEmail ) throws SQLException {       
    //code for update-operation   
-   st.executeUpdate("UPDATE ROOT.STAFF SET STAFFFULLNAME='" + StaffFullName + "' WHERE STAFFID='"+ StaffID +"'"); 
+   st.executeUpdate("UPDATE ROOT.STAFF SET STAFFFULLNAME='" + StaffFullName + "' WHERE STAFFEMAIL='"+ StaffEmail +"'"); 
 } 
 
-public void updateStaffEmail(String StaffID, String StaffEmail) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFEMAIL='" + StaffEmail + "' WHERE STAFFID='" + StaffID + "'");    
+public void updateStaffEmail(String newStaffEmail, String StaffEmail) throws SQLException {
+    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFEMAIL='" + newStaffEmail + "' WHERE STAFFEMAIL='" + StaffEmail + "'");    
 }
 
-public void updateStaffPwd(String StaffID, String StaffPwd) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFPWD='" + StaffPwd + "' WHERE STAFFID='" + StaffID + "'");    
+public void updateStaffPwd(String StaffPwd, String StaffEmail ) throws SQLException {
+    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFPWD='" + StaffPwd + "' WHERE STAFFEMAIL='" + StaffEmail + "'");    
 }
 
 
-public void updateStaffMobNo(String StaffID, String StaffMobNo) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFMOBNO='" + StaffMobNo+ "' WHERE STAFFID='" + StaffID + "'");   
+public void updateStaffMobNo(String StaffMobNo, String StaffEmail) throws SQLException {
+    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFMOBNO='" + StaffMobNo+ "' WHERE STAFFEMAIL='" + StaffEmail + "'");   
 }
 //delete a customer from the database   
-public void deleteStaff(String StaffID) throws SQLException{       
+public void deleteStaff(String StaffEmail) throws SQLException{       
    //code for delete-operation   
-   st.executeUpdate("DELETE FROM ROOT.STAFF WHERE CUSTID='" + StaffID + "'"); 
+   st.executeUpdate("DELETE FROM ROOT.STAFF WHERE STAFFEMAIL='" + StaffEmail + "'"); 
 }
 
 //fetch customers from customer database

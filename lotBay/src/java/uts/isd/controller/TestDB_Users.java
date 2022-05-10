@@ -28,7 +28,13 @@ DBManager db = new DBManager(conn);
 //db.addCustomer("Vox", "Vox@email.com", "1234", "12 World", "1", "0401000000");
 //db.addCustomer("Nina", "Ninaurr@email.com", "2232", " ", " ", "0432000000");
 //db.addCustomer("Etta", "Etta@email.com", "1111","","","0411000000");
-db.addCustomer("test", "test@gmail.com","1234"," ","","0456789012");
+//db.addCustomer("test", "test@gmail.com","1234"," ","","0456789012");
+//db.updateCustEmail("vox@gmail.com", "Vox@email.com");
+//db.updateCustName("testing","test@gmail.com");
+//db.updateCustMobNo("0478678678", "test@gmail.com");
+//db.updateCustPwd("1212", "test@gmail.com");
+//db.updateCustShippingAdd("Australia", "test@gmail.com");
+//db.deleteCust("test@email.com");
 /*System.out.print("firstname: ");
 String firstname = in.nextLine();
 
