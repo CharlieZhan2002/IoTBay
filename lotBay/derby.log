@@ -1,14 +1,20 @@
-Tue May 10 03:59:46 AEST 2022 : Apache Derby 网络服务器 - 10.14.2.0 - (1828579) 已启动并准备接受端口 1527 上的连接
+Tue May 10 17:35:42 CST 2022 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Tue May 10 03:59:46 AEST 2022:
-正在使用类加载程序 jdk.internal.loader.ClassLoaders$AppClassLoader@70dea4e 引导数据库
-目录 D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay\db 中的 Derby 版本 The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) 实例 a816c00e-0180-a9fa-2cad-ffffe0f8d0b1
-已从 file:/C:/Program%20Files/Java/jdk-17.0.2/db-derby-10.14.2.0-bin/lib/derby.jar 加载
+Tue May 10 17:35:42 CST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0180-ad53-09a2-00003f37f198 
+on database directory D:\Uni stuff\ISD\IoTBay software\IoTBay\lotBay\db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
+Loaded from file:/D:/Java%20SDK/db-derby-10.14.2.0-bin/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=17.0.2+8-LTS-86
-user.dir=C:\Program Files\Java\jdk-17.0.2\db-derby-10.14.2.0-bin
-os.name=Windows 10
+user.dir=D:\Java SDK\db-derby-10.14.2.0-bin
+os.name=Windows 11
 os.arch=amd64
 os.version=10.0
-derby.system.home=D:\Andy\Study\UTS\41025-ISD\IoTBay\lotBay
-数据库类加载程序已启动 - derby.database.classpath=''
+derby.system.home=D:\Uni stuff\ISD\IoTBay software\IoTBay\lotBay
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue May 10 17:36:06 CST 2022: Shutting down Derby engine
+----------------------------------------------------------------
+Tue May 10 17:36:06 CST 2022:
+Shutting down instance a816c00e-0180-ad53-09a2-00003f37f198 on database directory D:\Uni stuff\ISD\IoTBay software\IoTBay\lotBay\db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
+----------------------------------------------------------------
