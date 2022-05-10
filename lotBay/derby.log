@@ -1,7 +1,7 @@
-Tue May 10 17:35:42 CST 2022 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+Tue May 10 17:38:58 CST 2022 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Tue May 10 17:35:42 CST 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0180-ad53-09a2-00003f37f198 
+Tue May 10 17:38:58 CST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0180-ad56-07dc-00003f37f198 
 on database directory D:\Uni stuff\ISD\IoTBay software\IoTBay\lotBay\db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
 Loaded from file:/D:/Java%20SDK/db-derby-10.14.2.0-bin/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -12,9 +12,3 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=D:\Uni stuff\ISD\IoTBay software\IoTBay\lotBay
 Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Tue May 10 17:36:06 CST 2022: Shutting down Derby engine
-----------------------------------------------------------------
-Tue May 10 17:36:06 CST 2022:
-Shutting down instance a816c00e-0180-ad53-09a2-00003f37f198 on database directory D:\Uni stuff\ISD\IoTBay software\IoTBay\lotBay\db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
-----------------------------------------------------------------

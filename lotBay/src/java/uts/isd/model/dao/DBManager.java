@@ -54,10 +54,8 @@ public Customer findCustomer(String CustEmail, String CustPwd) throws SQLExcepti
 }
 //Add a customer-data into the database   
 public void addCustomer(String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustAccess, String CustMobNo) throws SQLException {                   //code for add-operation       
-  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ CustFullName +" ','"+ CustEmail +" ','"+ CustPwd +"', '"+ CustShippingAddr +"' , '" + CustAccess +"','"+ CustMobNo +"')");   
-  //st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('CustFullName ','CustEmail ',' CustPwd ', ' CustShippingAddr ' , ' CustAccess ',"+ CustMobNo +"')");     
-//st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')"); 
-  //st.executeUpdate("INSERT INTO ROOT.PRODUCT VALUES('"+ pid +" ','"+ pname +" ','"+ type +" ','"+ price +"','"+ quantity +"')");   
+  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ CustFullName +" ','"+ CustEmail +" ','"+ CustPwd +"', '"+ CustShippingAddr +"' , '" + CustAccess +"', '"+ CustMobNo +"')");   
+  //st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')");  
 }
 
 //update a customer details in the database   
