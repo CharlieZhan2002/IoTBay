@@ -85,6 +85,20 @@ public void deleteCust(String CustID) throws SQLException{
    st.executeUpdate("DELETE FROM ROOT.CUSTOMERS WHERE CUSTID='" + CustID + "'"); 
 }
 
+public boolean checkCustEmail (String CustEmail) throws SQLException {
+    boolean check = false;
+    String fetch = "SELECT * FROM ROOT.CUSTOMERS WHERE CUSTEMAIL = '" + CustEmail +"'";
+    ResultSet rs = st.executeQuery(fetch);
+    while (rs.next()){
+        String checkEmail = rs.getString(2);
+        if(checkEmail != null){
+            check = true;
+            break;
+        }
+    }
+    return check;
+}
+
 //fetch customers from customer database
 public ArrayList<Customer> fetchCustomers()throws SQLException{
     String fetch = "SELECT * from ROOT.CUSTOMERS";

@@ -28,6 +28,7 @@ DBManager db = new DBManager(conn);
 //db.addCustomer("Vox", "Vox@email.com", "1234", "12 World", "1", "0401000000");
 //db.addCustomer("Nina", "Ninaurr@email.com", "2232", " ", " ", "0432000000");
 //db.addCustomer("Etta", "Etta@email.com", "1111","","","0411000000");
+db.addCustomer("test", "test@gmail.com","1234"," ","","0456789012");
 /*System.out.print("firstname: ");
 String firstname = in.nextLine();
 
