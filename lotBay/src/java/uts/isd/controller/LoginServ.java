@@ -43,24 +43,27 @@ public class LoginServ extends HttpServlet {
                 DBManager db = new DBManager(conn);
                 
                 if(db.checkStaffByEmail(email) != false){ //Check if user is a staff 
+                    boolean c = db.checkStaffByEmail(email);
+                    System.out.println(c);
                     if(db.findStaff(email, pwd) != null) { //if its staff and staff exists 
                         String staffEmail = request.getParameter("email");
                         
                         HttpSession session = request.getSession();
                         session.setAttribute("staffEmail", staffEmail);
-                        response.sendRedirect("../WelcomePage/Welcome.jsp"); //direct staff to staff page 
+                        response.sendRedirect("/lotBay/WelcomePage/Welcome.jsp"); //direct staff to staff page 
                     } else { //staff is not found, error in login 
-                        response.sendRedirect("../LoginPage/LoginError.jsp");
+                        response.sendRedirect("/lotBay/LoginPage/LoginError.jsp");
                     }   
                 }else{ //Not a staff
                     if(db.findCustomer(email, pwd) != null){ //customer exists
+                       
                         String custEmail = request.getParameter("email");
-                        
+                         System.out.println("email is" + custEmail);
                         HttpSession session = request.getSession();
                         session.setAttribute("custEmail", custEmail);
-                        response.sendRedirect("../WelcomePage/Welcome.jsp");
+                        response.sendRedirect("/lotBay/WelcomePage/Welcome.jsp");
                     }else{//customer not found
-                        response.sendRedirect("../LoginPage/LoginError.jsp");
+                        response.sendRedirect("/lotBay/LoginPage/LoginError.jsp");
                     }
                 }
                 connector.closeConnection();

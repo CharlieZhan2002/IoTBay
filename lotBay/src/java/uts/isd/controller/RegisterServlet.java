@@ -17,18 +17,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 /**
  *
  * @author ettas
  */
-@WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
+//@WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
 public class RegisterServlet extends HttpServlet {
     
    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+            System.out.println("In the servlet");
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
             // TODO output your page here. You may use following sample code. 
@@ -44,12 +45,13 @@ public class RegisterServlet extends HttpServlet {
                 DBManager db = new DBManager(conn);
                 
                 boolean emailExist = db.checkCustEmail(regEmail);
+               System.out.println(emailExist);
                 if (emailExist != true){
                     db.addCustomer(regFullName, regEmail, regPwd, null, custAccess, regPhone);
-                    response.sendRedirect("../WelcomePage/Welcome.jsp");
+                    response.sendRedirect("/lotBay/LoginPage/Login.jsp");
                 }
                 else{
-                    response.sendRedirect("/IoTBay/RegisterPage/RegistrationError.jsp");
+                    response.sendRedirect("/lotBay/RegisterPage/RegistrationError.jsp");
                 }
                 connector.closeConnection();
                 
