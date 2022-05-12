@@ -26,13 +26,7 @@
 			<section>
 				<header>
 					<h1 align="center">IoTbay</h1>
-					<h2 align="center">Welcome! 
-                                            <%
-                                                String name = request.getParameter("fullname");
-                                                String dob = request.getParameter("dateofbirth");
-                                                String password = request.getParameter("password");
-                                                String useremail =  request.getParameter("email");
-                                            %><%= (useremail != null) ? useremail: "Anonymous User"%></h2>
+					<h2 align="center">Welcome! ${custEmail} </h2>
 				</header>
 				<p>
 					IoTBay has a wide range collection of devices and sensors (Refer to IoT websites to acquire devices and sensors listings. I.E: https://tutorials-raspberrypi.com/raspberry-pi-sensors-overview-50-important-components/). IoTBay sells these devices in their Sydney store to their customers. IoTBay aims to improve their business portfolio and provides customers with the option of purchasing the IoT devices online. There is a wide range of online stores nowadays selling similar IoT devices; therefore the IoTBay aims to purchase a competitive web application that provides user-friendly and effective interface to customers.
@@ -44,8 +38,12 @@
 
 				<ul>
 					<li>
-						<a href='../MainPage/Main.jsp' target="_blank"><h2  align="center">Begin</h2></a>
-                                                <a href='../ShowProductPage/ShowProduct.jsp' target="_blank"><h2  align="center">Purchase Product</h2></a>
+						<form action="../MainServlet" method="post">
+                                                    <h2 align="center"><input class="lg_cb_btn" type="submit" value="My Profile"/></h2>
+                                                </form>
+                                                <form action="../ShowProductPage/ShowProduct.jsp" method="post">
+                                                <h2 align="center"><input class="lg_cb_btn" type="submit" value="Purchase Product"/></h2>
+                                                </form>
 						<article>
 							<p>Please follow us</p>
 							<time datetime="2022-03-31">1 Hour ago</time>
@@ -65,11 +63,7 @@
 		</div>
 	</main>
 </body>
-        <%
-            //need to edit
-            User user = new User("null", "null", useremail, "null", dob, password, "null", "null");
-            session.setAttribute("user", user);
-        %>
+       
 </html>
 
 

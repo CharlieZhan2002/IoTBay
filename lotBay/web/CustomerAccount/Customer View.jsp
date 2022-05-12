@@ -18,34 +18,54 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-            Customer customer = (Customer) session.getAttribute("customer");
-        %>
+        
         <h1 class="cv_tit">IoTBay System</h1>
         </br>
         <div class="cv_cb">
-            <p class="cv_cb_tit">Your Details</p>
+            <p class="cv_cb_tit">My Profile</p>
             <div class="cv_cb_tb">
                 <table class="cv_cb_tb_con">
                     <tr>
-                        <td class="cv_td_head">Name</td><td class="cv_td_con">Details</td>
+                        <td class="cv_td_head">Name</td><td class="cv_td_con">${name}</td>
                     </tr>
                     <tr>
-                        <td class="cv_td_head">Email</td><td class="cv_td_con">Email</td>
+                        <td class="cv_td_head">Email</td><td class="cv_td_con">${email}</td>
                     </tr>
                     <tr>
-                        <td class="cv_td_head">Password</td><td class="cv_td_con">Password</td>
+                        <td class="cv_td_head">Password</td><td class="cv_td_con">
+                            <p style="display:none" id="pw">${password}</p>
+                        </td>
+                        <td style="width: 25%">
+                            <button class="cv_sh_btn"onclick="showHide()">Show/Hide</button>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="cv_td_head">Shipping Details</td><td class="cv_td_con">Shipping details</td> 
+                        <td class="cv_td_head">Shipping Details</td><td class="cv_td_con">${shipping}</td> 
                     </tr>
                     <tr>
-                        <td class="cv_td_head">Mobile Number</td><td class="cv_td_con">Mobile number</td>
+                        <td class="cv_td_head">Mobile Number</td><td class="cv_td_con">${phone}</td>
                     </tr>
                 </table>
                 
             </div>
-            <input class="cv_cb_btn" type="submit" value="Update Details"/>
+                    <form method="POST" action="EditAccount.jsp">  
+                           <input class="cv_cb_btnr" type="submit" value="Update Details"/>  
+                    </form> 
+                    
+                    <form method="POST" action="../LogoutPage/Logout.jsp">  
+                           <input class="cv_cb_btn" type="submit" value="Logout"/>  
+                    </form> 
+                    
         </div>
+                    <script>
+                function showHide(){
+                   var x = document.getElementById("pw");
+                   if(x.style.display === "none"){
+                       x.style.display = "block";}
+                   else{
+                       x.style.display = "none";
+                   }
+                }
+            </script>
     </body>
 </html>

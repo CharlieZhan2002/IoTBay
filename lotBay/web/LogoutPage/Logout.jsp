@@ -15,12 +15,13 @@
         <link type="text/css" rel="stylesheet" href="Logout.css">
     </head>
     <body>
-        <form action="../index page/index.jsp" method="get">
-        <h1 class="lg_cb_tit">Logout successed</h1><br/><br/>
+        <form action="../LogoutServlet.jsp" method="post">
+        <h1 class="lg_cb_tit">Logout successful</h1><br/><br/>
         <div class="lg_cb"><br/><br/><br/><br/>
-        <p class="lg_cb_subtit">Thank you for using the system</p>
-        <p class="lg_cb_subtit">Please click the buttom in below to back to index page.</p></br>
-        <button class="lg_cb_btn" type="submit" value="post"/>Confirm</button>
+        <p class="lg_cb_subtit">Thank you for using IoTBay</p>
+        <p class="lg_cb_subtit">Click the button below to return to index</p>
+        </br>
+          <button class="lg_cb_btn" type="submit" value="post"/>Index</button>
         </form>
         </div>
     </body>

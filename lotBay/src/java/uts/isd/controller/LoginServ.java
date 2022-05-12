@@ -30,10 +30,12 @@ import java.util.logging.Logger;
  * @author ettas
  */
 public class LoginServ extends HttpServlet {
+    
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
             String email = request.getParameter("email");
             String pwd = request.getParameter("password");
             
@@ -50,7 +52,7 @@ public class LoginServ extends HttpServlet {
                         
                         HttpSession session = request.getSession();
                         session.setAttribute("staffEmail", staffEmail);
-                        response.sendRedirect("/lotBay/WelcomePage/Welcome.jsp"); //direct staff to staff page 
+                        response.sendRedirect("../lotBay/WelcomePage/Welcome.jsp"); //direct staff to staff page 
                     } else { //staff is not found, error in login 
                         response.sendRedirect("/lotBay/LoginPage/LoginError.jsp");
                     }   
@@ -58,7 +60,7 @@ public class LoginServ extends HttpServlet {
                     if(db.findCustomer(email, pwd) != null){ //customer exists
                        
                         String custEmail = request.getParameter("email");
-                         System.out.println("email is" + custEmail);
+                         System.out.println("email is " + custEmail);
                         HttpSession session = request.getSession();
                         session.setAttribute("custEmail", custEmail);
                         response.sendRedirect("/lotBay/WelcomePage/Welcome.jsp");

@@ -19,6 +19,7 @@
         <title>Login Page</title>
     </head>
     <body>
+        
         <h1 class="lg_tit">Welcome to IoTBay System</h1>
         <br/>
         <div class="lg_cb">
@@ -26,7 +27,7 @@
             <p class="lg_cb_subtit">Please enter your Username and Password</p>
             <form action="../LoginServ" method="post">
                 <p class="lg_cb_iptit">Your Email</p>
-                <input class="lg_cb_ip" type="text" placeholder="Email" name="email" required="true">
+                <input class="lg_cb_ip" type="text" placeholder= "Email" name="email" required="true">
                 <p class="lg_cb_iptit">Your Password</p>
                 <input class="lg_cb_ip" style = "margin-bottom: 15px" type="password" placeholder="Password" name="password" required="true">
                 </br>

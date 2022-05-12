@@ -52,6 +52,23 @@ a:hover{
 	color: red;
 }
 
+.lg_cb_btn{
+    text-align: center;
+    font-size: 17px;
+    width: 150px;
+    height:44px;
+    border-radius: 20px;
+    border:2px solid green;
+    background-color: rgba(36, 36, 36, 0.8);
+    color:white;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+.lg_cb_btn:hover{
+    background-color: rgba(4, 105, 4, 0.466);
+}
+
 main{
 	max-width: 1300px;
 	width: 70%;

@@ -86,8 +86,24 @@ body{
     width: 300px;
 }
 .cv_cb_btn{
+    float:right;
     text-align: center;
+    vertical-align: middle;
     font-size: 17px;
+    width: 150px;
+    height:44px;
+    border-radius: 20px;
+    border:2px solid green;
+    background-color: rgba(36, 36, 36, 0.8);
+    color:white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.cv_cb_btnr{
+    float:left;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
     width: 150px;
     height:44px;
     border-radius: 20px;
@@ -99,4 +115,94 @@ body{
 }
 .cv_cb_btn:hover{
     background-color: rgba(4, 105, 4, 0.466);
+}
+.cv_cb_btnr:hover{
+    background-color: rgba(4, 105, 4, 0.466);
+}
+.cv_sh_btn{
+    width: 70px;
+    height: 20px;
+    border:0px solid;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 12px;
+}
+
+.ea_cb_ip{
+    text-align: center;
+    width: 250px;
+    height:28px;
+    border-radius: 20px;
+    border:2px solid rgb(1, 72, 204);
+    background-color: rgba(36, 36, 36, 0.8);
+    color:white;
+}
+.ea_cb_ip:hover{
+    border:2px solid white;
+}
+.ea_cb_iptit{
+    color: white;
+    text-align: left;
+    margin-left: 80px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 10px;
+}
+.ea_cb_su{
+    float:left;
+    color: white;
+    font-size: 16px;
+    cursor:pointer;
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: underline;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+.ea_cb_su:hover{
+    color:gray;
+}
+
+@keyframes ani1 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+.sv_cb{
+    display:inline-block;
+    width: 400px;
+    height: 440px;
+    border-radius: 30px;
+    background-color: rgba(36, 36, 36, 0.8);
+    box-shadow:0 0 10px gray;
+    animation-duration: 1.5s;
+    animation-name: ani2;
+}
+
+.sv_cb_subtit{
+    color: white;
+    font-size: 15px;
+    cursor: default;
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 35px;
+}
+.sv_cb_btn:hover{
+    background-color: rgba(4, 105, 4, 0.466);
+}
+.sv_cb_btn{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 17px;
+    width: 150px;
+    height:44px;
+    border-radius: 20px;
+    border:2px solid green;
+    background-color: rgba(36, 36, 36, 0.8);
+    color:white;
+    margin-top: 10px;
+    cursor: pointer;
 }

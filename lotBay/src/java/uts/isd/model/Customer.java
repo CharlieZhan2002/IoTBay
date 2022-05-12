@@ -22,6 +22,16 @@ public class Customer {
       this.CustFullName = CustFullName;
       this.CustMobNo = CustMobNo; 
   }
+  
+  public Customer (String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustMobNo){ 
+      this.CustFullName = CustFullName;
+      this.CustEmail = CustEmail;
+      this.CustPwd = CustPwd;
+      this.CustShippingAddr = CustShippingAddr;
+      this.CustMobNo = CustMobNo; 
+  }
+  
+  
   public Customer (String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustAccess, String CustMobNo){ 
       this.CustFullName = CustFullName;
       this.CustEmail = CustEmail;

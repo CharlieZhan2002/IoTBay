@@ -29,9 +29,10 @@ public Customer findCustbyEmail(String CustEmail) throws SQLException {
           String CEmail = rs.getString(2);
           String CPwd = rs.getString(3);
           String CFullName = rs.getString(1);
+          String CShippingAdd = rs.getString(4);
           String CMobNo = rs.getString(6);
        if(CEmail .equalsIgnoreCase(CustEmail)){
-           return new Customer(CEmail,CPwd,CFullName,CMobNo);
+           return new Customer(CFullName,CEmail,CPwd, CShippingAdd, CMobNo);
        }
    }
    return null;   
@@ -58,27 +59,31 @@ public void addCustomer(String CustFullName, String CustEmail, String CustPwd, S
   //st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')");  
 }
 
+public void updateCustomer(String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustMobNo) throws SQLException {
+        //code for add-operation
+        st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTFULLNAME='" + CustFullName + "', CUSTEMAIL='" + CustEmail + "', CUSTPWD='" + CustPwd + "',CUSTSHIPPINGADD='" + CustShippingAddr + "', CUSTMOBNO='" + CustMobNo + "' WHERE CUSTEMAIL='" + CustEmail + "'");
+}
 //update a customer details in the database   
-public void updateCustName(String CustFullName , String CustEmail) throws SQLException {       
-   //code for update-operation   
-   st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTFULLNAME='" + CustFullName + "' WHERE CUSTEMAIL='"+ CustEmail +"'"); 
-} 
-
-public void updateCustEmail(String newCustEmail, String CustEmail) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTEMAIL='" + newCustEmail + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
-}
-
-public void updateCustPwd(String CustPwd, String CustEmail) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTPWD='" + CustPwd + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
-}
-
-public void updateCustShippingAdd(String CustShippingAdd, String CustEmail) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTSHIPPINGADD='" + CustShippingAdd + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
-}
-
-public void updateCustMobNo(String CustMobNo, String CustEmail) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTMOBNO='" + CustMobNo+ "' WHERE CUSTEMAIL='" + CustEmail + "'");   
-}
+//public void updateCustName(String CustFullName , String CustEmail) throws SQLException {       
+//   //code for update-operation   
+//   st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTFULLNAME='" + CustFullName + "' WHERE CUSTEMAIL='"+ CustEmail +"'"); 
+//} 
+//
+//public void updateCustEmail(String newCustEmail, String CustEmail) throws SQLException {
+//    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTEMAIL='" + newCustEmail + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
+//}
+//
+//public void updateCustPwd(String CustPwd, String CustEmail) throws SQLException {
+//    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTPWD='" + CustPwd + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
+//}
+//
+//public void updateCustShippingAdd(String CustShippingAdd, String CustEmail) throws SQLException {
+//    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTSHIPPINGADD='" + CustShippingAdd + "' WHERE CUSTEMAIL='" + CustEmail + "'");    
+//}
+//
+//public void updateCustMobNo(String CustMobNo, String CustEmail) throws SQLException {
+//    st.executeUpdate("UPDATE ROOT.CUSTOMERS SET CUSTMOBNO='" + CustMobNo+ "' WHERE CUSTEMAIL='" + CustEmail + "'");   
+//}
 //delete a customer from the database   
 public void deleteCust(String CustEmail) throws SQLException{       
    //code for delete-operation   

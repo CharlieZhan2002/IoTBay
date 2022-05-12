@@ -15,6 +15,7 @@
         <title>Register Page</title>
     </head>
     <body>
+        
         <h1 class="r_tit">Welcome to IoTBay System</h1>
         <br/>
         <div class="r_cb">
