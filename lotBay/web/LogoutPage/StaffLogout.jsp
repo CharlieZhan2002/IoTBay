@@ -1,7 +1,7 @@
 <%-- 
-    Document   : Logout
-    Created on : 2022-3-30, 14:44:46
-    Author     : 12717
+    Document   : StaffLogout
+    Created on : May 13, 2022, 2:49:44 AM
+    Author     : ettas
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,7 +15,7 @@
         <link type="text/css" rel="stylesheet" href="Logout.css">
     </head>
     <body>
-        <form action="../LogoutServlet" method="post">
+        <form action="../StaffLogoutServlet" method="post">
         <h1 class="lg_cb_tit">Logout successful</h1><br/><br/>
         <div class="lg_cb"><br/><br/><br/><br/>
         <p class="lg_cb_subtit">Thank you for using IoTBay</p>

@@ -189,6 +189,11 @@ public void updateStaff(String StaffFullName, String StaffEmail, String StaffPwd
         //code for add-operation
         st.executeUpdate("UPDATE ROOT.STAFF SET STAFFFULLNAME='" + StaffFullName + "', STAFFEMAIL='" + StaffEmail + "', STAFFPWD='" + StaffPwd + "', STAFFMOBNO='" + StaffMobNo + "' WHERE STAFFEMAIL='" + StaffEmail + "'");
 }
+
+public void deleteStaff(String StaffEmail) throws SQLException{       
+   //code for delete-operation   
+   st.executeUpdate("DELETE FROM ROOT.STAFF WHERE STAFFEMAIL='" + StaffEmail + "'"); 
+}
 //update a customer details in the database   
 //public void updateStaffName(String StaffFullName, String StaffEmail ) throws SQLException {       
 //   //code for update-operation   

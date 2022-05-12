@@ -50,7 +50,7 @@
                            <input class="cv_cb_btnr" type="submit" value="Update Details"/>  
                     </form> 
                     
-                    <form method="POST" action="../LogoutPage/Logout.jsp">  
+                    <form method="POST" action="../LogoutPage/StaffLogout.jsp">  
                            <input class="cv_cb_btn" type="submit" value="Logout"/>  
                     </form> 
                     

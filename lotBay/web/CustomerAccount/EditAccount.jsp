@@ -62,7 +62,11 @@
                     
                     <input class="cv_cb_btn" type="submit" value="Save"/>
                     <a class="ea_cb_su" href="Customer View.jsp">Cancel</a>
+                    
             </form>
+                         <form method="POST" action="AccountDelete.jsp">  
+                         <input style="margin-left: 50px;"class="sv_cb_btn" type="submit" value="Delete"/>  
+                     </form> 
         </div>
     </body>
 </html>

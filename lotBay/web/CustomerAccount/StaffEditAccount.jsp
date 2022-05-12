@@ -21,10 +21,11 @@
     <body>
          <h1 class="cv_tit">IoTBay System</h1>
         </br>
-        <div class="cv_cb">
+        <div style="height:480px;"class="cv_cb">
+            
             <p class="cv_cb_tit">Update Profile Details</p>
             <form action="../StaffUpdateAcct" method="post">
-            <div class="cv_cb_tb">
+            <div style ="height:300px;"class="cv_cb_tb">
                 <table class="cv_cb_tb_con">
                     <tr>
                         <td class="cv_td_head">Name</td>
@@ -58,6 +59,9 @@
                     <input class="cv_cb_btn" type="submit" value="Save"/>
                     <a class="ea_cb_su" href="../StaffPages/StaffView.jsp">Cancel</a>
             </form>
+                        <form method="POST" action="staffAccountDelete.jsp">  
+                         <input style="margin-left: 50px;"class="sv_cb_btn" type="submit" value="Delete"/>  
+                     </form> 
         </div>
     </body>
 </html>
