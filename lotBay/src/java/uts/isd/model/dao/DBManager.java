@@ -146,6 +146,21 @@ public String checkAccess(String StaffEmail) throws SQLException{
     
     return SAccess; 
 }
+public Staff findStaffbyEmail(String StaffEmail) throws SQLException {       
+   String fetch = "SELECT * FROM ROOT.STAFF WHERE STAFFEMAIL = '"+ StaffEmail + "'";  
+   ResultSet rs = st.executeQuery(fetch); 
+
+   while(rs.next()){
+          String SEmail = rs.getString(2);
+          String SPwd = rs.getString(3);
+          String SFullName = rs.getString(1);
+          String SMobNo = rs.getString(5);
+       if(SEmail .equalsIgnoreCase(StaffEmail)){
+           return new Staff(SFullName,SEmail,SPwd, SMobNo);
+       }
+   }
+   return null;   
+}
       
 public Staff findStaff(String StaffEmail, String StaffPwd) throws SQLException {       
    String fetch = "SELECT * FROM ROOT.STAFF WHERE STAFFEMAIL = '"+ StaffEmail + "' AND STAFFPWD = '" + StaffPwd +"'";  
@@ -163,52 +178,57 @@ public Staff findStaff(String StaffEmail, String StaffPwd) throws SQLException {
    }
    return null;   
 }
+
+
 //Add a customer-data into the database   
 public void addStaff(String StaffFullName, String StaffEmail, String StaffPwd, String StaffAccess, String StaffMobNo) throws SQLException {                   //code for add-operation       
-  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ StaffFullName +" ','"+ StaffEmail +" ','"+ StaffPwd +"', '" + StaffAccess + "', '"+ StaffMobNo +"')");   
+  st.executeUpdate("INSERT INTO ROOT.STAFF VALUES('"+ StaffFullName +" ','"+ StaffEmail +" ','"+ StaffPwd +"', '" + StaffAccess + "', '"+ StaffMobNo +"')");   
   //st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')");  
 }
-
+public void updateStaff(String StaffFullName, String StaffEmail, String StaffPwd, String StaffMobNo) throws SQLException {
+        //code for add-operation
+        st.executeUpdate("UPDATE ROOT.STAFF SET STAFFFULLNAME='" + StaffFullName + "', STAFFEMAIL='" + StaffEmail + "', STAFFPWD='" + StaffPwd + "', STAFFMOBNO='" + StaffMobNo + "' WHERE STAFFEMAIL='" + StaffEmail + "'");
+}
 //update a customer details in the database   
-public void updateStaffName(String StaffFullName, String StaffEmail ) throws SQLException {       
-   //code for update-operation   
-   st.executeUpdate("UPDATE ROOT.STAFF SET STAFFFULLNAME='" + StaffFullName + "' WHERE STAFFEMAIL='"+ StaffEmail +"'"); 
-} 
-
-public void updateStaffEmail(String newStaffEmail, String StaffEmail) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFEMAIL='" + newStaffEmail + "' WHERE STAFFEMAIL='" + StaffEmail + "'");    
-}
-
-public void updateStaffPwd(String StaffPwd, String StaffEmail ) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFPWD='" + StaffPwd + "' WHERE STAFFEMAIL='" + StaffEmail + "'");    
-}
-
-
-public void updateStaffMobNo(String StaffMobNo, String StaffEmail) throws SQLException {
-    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFMOBNO='" + StaffMobNo+ "' WHERE STAFFEMAIL='" + StaffEmail + "'");   
-}
-//delete a customer from the database   
-public void deleteStaff(String StaffEmail) throws SQLException{       
-   //code for delete-operation   
-   st.executeUpdate("DELETE FROM ROOT.STAFF WHERE STAFFEMAIL='" + StaffEmail + "'"); 
-}
-
-//fetch customers from customer database
-public ArrayList<Staff> fetchStaff()throws SQLException{
-    String fetch = "SELECT * from ROOT.STAFF";
-    ResultSet rs = st.executeQuery(fetch);
-    ArrayList<Staff> temp = new ArrayList();
-    while (rs.next()){
-          String SEmail = rs.getString(3);
-          String SPwd = rs.getString(4);
-          String SID = rs.getString(1);
-          String SFullName = rs.getString(2);
-          String SMobNo = rs.getString(6);
-   
-          temp.add(new Staff(SID, SFullName, SEmail, SPwd, SMobNo));
-    }
-    return temp;
-}
+//public void updateStaffName(String StaffFullName, String StaffEmail ) throws SQLException {       
+//   //code for update-operation   
+//   st.executeUpdate("UPDATE ROOT.STAFF SET STAFFFULLNAME='" + StaffFullName + "' WHERE STAFFEMAIL='"+ StaffEmail +"'"); 
+//} 
+//
+//public void updateStaffEmail(String newStaffEmail, String StaffEmail) throws SQLException {
+//    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFEMAIL='" + newStaffEmail + "' WHERE STAFFEMAIL='" + StaffEmail + "'");    
+//}
+//
+//public void updateStaffPwd(String StaffPwd, String StaffEmail ) throws SQLException {
+//    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFPWD='" + StaffPwd + "' WHERE STAFFEMAIL='" + StaffEmail + "'");    
+//}
+//
+//
+//public void updateStaffMobNo(String StaffMobNo, String StaffEmail) throws SQLException {
+//    st.executeUpdate("UPDATE ROOT.STAFF SET STAFFMOBNO='" + StaffMobNo+ "' WHERE STAFFEMAIL='" + StaffEmail + "'");   
+//}
+////delete a customer from the database   
+//public void deleteStaff(String StaffEmail) throws SQLException{       
+//   //code for delete-operation   
+//   st.executeUpdate("DELETE FROM ROOT.STAFF WHERE STAFFEMAIL='" + StaffEmail + "'"); 
+//}
+//
+////fetch customers from customer database
+//public ArrayList<Staff> fetchStaff()throws SQLException{
+//    String fetch = "SELECT * from ROOT.STAFF";
+//    ResultSet rs = st.executeQuery(fetch);
+//    ArrayList<Staff> temp = new ArrayList();
+//    while (rs.next()){
+//          String SEmail = rs.getString(3);
+//          String SPwd = rs.getString(4);
+//          String SID = rs.getString(1);
+//          String SFullName = rs.getString(2);
+//          String SMobNo = rs.getString(6);
+//   
+//          temp.add(new Staff(SID, SFullName, SEmail, SPwd, SMobNo));
+//    }
+//    return temp;
+//}
 
 
 

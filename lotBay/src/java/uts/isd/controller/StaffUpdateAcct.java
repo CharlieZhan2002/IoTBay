@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import uts.isd.model.Customer;
+import uts.isd.model.Staff;
 import uts.isd.model.dao.DBConnector;
 import uts.isd.model.dao.DBManager;
 
@@ -24,10 +24,9 @@ import uts.isd.model.dao.DBManager;
  *
  * @author ettas
  */
-public class CustUpdateAcct extends HttpServlet {
+public class StaffUpdateAcct extends HttpServlet {
 
-
-  
+     
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -40,19 +39,17 @@ public class CustUpdateAcct extends HttpServlet {
             String name = request.getParameter("name");
             String email = (String)session.getAttribute("email");
             String password = request.getParameter("password");
-            String shipping = request.getParameter("shipping");
             String phone = request.getParameter("phone");
             
-            Customer customer = db.findCustbyEmail(email);
+            Staff staff = db.findStaffbyEmail(email);
             
-            session.setAttribute("name", customer.getCustFullName());
-            session.setAttribute("email", customer.getCustEmail());
-            session.setAttribute("password", customer.getCustPwd());
-            session.setAttribute("shipping", customer.getCustShippingAddr());
-            session.setAttribute("phone", customer.getCustMobNo());
+            session.setAttribute("name", staff.getStaffFullName());
+            session.setAttribute("email", staff.getStaffEmail());
+            session.setAttribute("password", staff.getStaffPwd());
+            session.setAttribute("phone", staff.getStaffMobNo());
             
-            db.updateCustomer(name, email, password, shipping, phone);
-            response.sendRedirect("/lotBay/CustomerAccount/Save.jsp");
+            db.updateStaff(name, email, password, phone);
+            response.sendRedirect("/lotBay/CustomerAccount/StaffSave.jsp");
             connector.closeConnection();
         
     } catch (ClassNotFoundException | SQLException ex) {
@@ -61,5 +58,3 @@ public class CustUpdateAcct extends HttpServlet {
 }
  }
 }
-    
-

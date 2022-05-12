@@ -26,7 +26,7 @@
 			<section>
 				<header>
 					<h1 align="center">IoTbay</h1>
-					<h2 align="center">Welcome! ${custEmail} </h2>
+					<h2 align="center">Welcome! ${staffEmail} </h2>
 				</header>
 				<p>
 					IoTBay has a wide range collection of devices and sensors (Refer to IoT websites to acquire devices and sensors listings. I.E: https://tutorials-raspberrypi.com/raspberry-pi-sensors-overview-50-important-components/). IoTBay sells these devices in their Sydney store to their customers. IoTBay aims to improve their business portfolio and provides customers with the option of purchasing the IoT devices online. There is a wide range of online stores nowadays selling similar IoT devices; therefore the IoTBay aims to purchase a competitive web application that provides user-friendly and effective interface to customers.
@@ -38,7 +38,7 @@
 
 				<ul>
 					<li>
-						<form action="../MainServlet" method="post">
+						<form action="../StaffViewServlet" method="post">
                                                     <h2 align="center"><input class="lg_cb_btn" type="submit" value="My Profile"/></h2>
                                                 </form>
                                                 <form action="../ShowProductPage/ShowProduct.jsp" method="post">

@@ -1,8 +1,9 @@
 <%-- 
-    Document   : Customer View
-    Created on : May 11, 2022, 3:01:22 AM
+    Document   : StaffView
+    Created on : May 13, 2022, 1:04:04 AM
     Author     : ettas
 --%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="uts.isd.model.*"%>
 <%@page import="uts.isd.model.dao.*"%>
@@ -14,7 +15,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="CustomerView.css">
+        <link rel="stylesheet" href="StaffView.css">
         <title>JSP Page</title>
     </head>
     <body>
@@ -40,15 +41,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="cv_td_head">Shipping Address</td><td class="cv_td_con">${shipping}</td> 
-                    </tr>
-                    <tr>
                         <td class="cv_td_head">Mobile Number</td><td class="cv_td_con">${phone}</td>
                     </tr>
                 </table>
                 
             </div>
-                    <form method="POST" action="EditAccount.jsp">  
+                    <form method="POST" action="../CustomerAccount/StaffEditAccount.jsp">  
                            <input class="cv_cb_btnr" type="submit" value="Update Details"/>  
                     </form> 
                     

@@ -32,6 +32,14 @@
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>uts.isd.controller.LogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>StaffViewServlet</servlet-name>
+        <servlet-class>uts.isd.controller.StaffViewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StaffUpdateAcct</servlet-name>
+        <servlet-class>uts.isd.controller.StaffUpdateAcct</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -63,6 +71,14 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StaffViewServlet</servlet-name>
+        <url-pattern>/StaffViewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StaffUpdateAcct</servlet-name>
+        <url-pattern>/StaffUpdateAcct</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
