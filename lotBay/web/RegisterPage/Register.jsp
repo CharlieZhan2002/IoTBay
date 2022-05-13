@@ -15,12 +15,13 @@
         <title>Register Page</title>
     </head>
     <body>
+        
         <h1 class="r_tit">Welcome to IoTBay System</h1>
         <br/>
         <div class="r_cb">
             <p class="r_cb_tit">Register</p>
             <p class="r_cb_subtit">Please Enter Your Details To Sign Up</p>
-            <form action="../WelcomePage/Welcome.jsp" method="post">
+            <form action="../RegisterServlet" method="post">
                 <p class="r_cb_iptit">Your Email</p>
                 <input class="r_cb_ip" type="text" placeholder="Email" name="email" required="true">
                 <p class="r_cb_iptit">Your Full Name</p>
@@ -28,9 +29,9 @@
                 <p class="r_cb_iptit">Your Password</p>
                 <input class="r_cb_ip" type="password" placeholder="Password" name="password" required="true">
                 <p class="r_cb_iptit">Your Phone Number</p>
-                    <input class="r_cb_ip" type="text" placeholder = "Phone Number"name="Phone Number" required="true">
+                    <input class="r_cb_ip" type="text" placeholder = "Phone Number"name="Phonenumber" required="true">
                 <input class="r_cb_btn" type="submit" value="Register"/>
-                <a class="r_cb_bk" href="../LoginPage/Login.jsp">Back to Login</a>
+                <a class="r_cb_bk" href="../index page/index.jsp">Back to index</a>
             </form>
         </div>
     </body>

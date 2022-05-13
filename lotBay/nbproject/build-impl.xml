@@ -929,7 +929,8 @@ exists or setup the property manually. For example like this:
             <arg value="-sysClasspath ${libs.jsp-compilation-syscp.classpath}"/>
             <arg value="-jspc.files"/>
             <arg path="${jsp.includes}"/>
-            
+            <arg value="-compilerSourceVM ${javac.source}"/>
+            <arg value="-compilerTargetVM ${javac.target}"/>
             <arg value="-javaEncoding ${source.encoding}"/>
             <classpath path="${java.home}/../lib/tools.jar:${libs.jsp-compiler.classpath}:${libs.jsp-compilation.classpath}"/>
         </java>
@@ -1391,7 +1392,6 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init,compile-test,-debug-start-debugger-test,-debug-start-debuggee-test" name="debug-test"/>
     <target depends="init,compile-test-single,-debug-start-debugger-test,-debug-start-debuggee-test-method" name="debug-test-method"/>
-    <target depends="debug-test-method" name="debug-single-method"/>
     <target depends="init,-pre-debug-fix,compile-test-single" if="netbeans.home" name="-do-debug-fix-test">
         <webproject1:nbjpdareload dir="${build.test.classes.dir}"/>
     </target>

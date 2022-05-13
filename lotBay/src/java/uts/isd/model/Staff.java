@@ -12,14 +12,24 @@ public class Staff {
     private String StaffFullName;
     private String StaffEmail;
     private String StaffPwd;
-    private int StaffMobNo;
+    private String StaffAccess;
+    private String StaffMobNo;
    
-  public Staff (String StaffFullName, String StaffEmail, String StaffPwd, int StaffMobNo){
+  public Staff (String StaffFullName, String StaffEmail, String StaffPwd, String StaffMobNo){
       this.StaffFullName = StaffFullName;
       this.StaffEmail = StaffEmail;
       this.StaffPwd = StaffPwd;
       this.StaffMobNo = StaffMobNo;
   }
+  
+  public Staff (String StaffFullName, String StaffEmail, String StaffPwd, String StaffAccess, String StaffMobNo){
+      this.StaffFullName = StaffFullName;
+      this.StaffEmail = StaffEmail;
+      this.StaffPwd = StaffPwd;
+      this.StaffAccess = StaffAccess;
+      this.StaffMobNo = StaffMobNo;
+  }
+ 
   
   public String getStaffFullName(){
       return StaffFullName;
@@ -44,12 +54,20 @@ public class Staff {
   public void setStaffPwd(String StaffPwd){
       this.StaffPwd = StaffPwd;
   }
+  
+  public String getStaffAccess(){
+      return StaffAccess;
+  }
+  
+  public void setStaffAccess(){
+      this.StaffAccess = StaffAccess;
+  }
  
-  public int getStaffMobNo(){
+  public String getStaffMobNo(){
       return StaffMobNo;
   }
   
-  public void setStaffMobNo(int StaffMobNo){
+  public void setStaffMobNo(String StaffMobNo){
       this.StaffMobNo = StaffMobNo;
   }
 }

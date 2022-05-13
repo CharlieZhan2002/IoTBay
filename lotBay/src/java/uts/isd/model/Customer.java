@@ -13,14 +13,32 @@ public class Customer {
     private String CustEmail;
     private String CustPwd;
     private String CustShippingAddr;
-    private int CustMobNo; 
+    private String CustMobNo; 
+    private String CustAccess;
    
-  public Customer (String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, int CustMobNo){
+  public Customer (String CustEmail, String CustPwd, String CustFullName, String CustMobNo){
+      this.CustEmail = CustEmail;
+      this.CustPwd = CustPwd;
+      this.CustFullName = CustFullName;
+      this.CustMobNo = CustMobNo; 
+  }
+  
+  public Customer (String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustMobNo){ 
       this.CustFullName = CustFullName;
       this.CustEmail = CustEmail;
       this.CustPwd = CustPwd;
       this.CustShippingAddr = CustShippingAddr;
-      this.CustMobNo = CustMobNo;
+      this.CustMobNo = CustMobNo; 
+  }
+  
+  
+  public Customer (String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustAccess, String CustMobNo){ 
+      this.CustFullName = CustFullName;
+      this.CustEmail = CustEmail;
+      this.CustPwd = CustPwd;
+      this.CustShippingAddr = CustShippingAddr;
+      this.CustAccess = CustAccess; 
+      this.CustMobNo = CustMobNo; 
   }
   
   public String getCustFullName(){
@@ -55,13 +73,33 @@ public class Customer {
       this.CustShippingAddr = CustShippingAddr;
   }
   
-  public int getCustMobNo(){
+  public String getCustMobNo(){
       return CustMobNo;
   }
   
-  public void setCustMobNo(int CustMobNo){
+  public void setCustMobNo(String CustMobNo){
       this.CustMobNo = CustMobNo;
   }
+  
+  public String getCustAccess (){
+      return CustAccess;
+  }
+  
+  public void setCustAccess(String CustAccess){
+      this.CustAccess = CustAccess;
+  }
+  
+  @Override
+    public String toString() {
+        return "Customer{" +
+                "CustFullName='" + CustFullName + '\'' +
+                ", CustEmail='" + CustEmail + '\'' +
+                ", CustPwd='" + CustPwd + '\'' +
+                ", CustShippingAddr='" + CustShippingAddr + '\'' +
+                ", CustAccess='" + CustAccess + '\'' +
+                ", CustMobNo='" + CustMobNo + '\'' +
+                '}';
+    }
   
 }
   
