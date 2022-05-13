@@ -52,6 +52,7 @@ public class CustUpdateAcct extends HttpServlet {
             session.setAttribute("phone", customer.getCustMobNo());
             
             db.updateCustomer(name, email, password, shipping, phone);
+            
             response.sendRedirect("/lotBay/CustomerAccount/Save.jsp");
             connector.closeConnection();
         

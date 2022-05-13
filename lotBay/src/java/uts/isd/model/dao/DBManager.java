@@ -31,7 +31,7 @@ public Customer findCustbyEmail(String CustEmail) throws SQLException {
           String CFullName = rs.getString(1);
           String CShippingAdd = rs.getString(4);
           String CMobNo = rs.getString(6);
-       if(CEmail .equalsIgnoreCase(CustEmail)){
+       if(CEmail.equalsIgnoreCase(CustEmail)){
            return new Customer(CFullName,CEmail,CPwd, CShippingAdd, CMobNo);
        }
    }
@@ -44,7 +44,7 @@ public Customer findCustomer(String CustEmail, String CustPwd) throws SQLExcepti
    while(rs.next()){
           String CEmail = rs.getString(2);
           String CPwd = rs.getString(3);
-          if(CEmail .equalsIgnoreCase(CustEmail) && CPwd.equals(CustPwd)){
+          if(CEmail.equalsIgnoreCase(CustEmail) && CPwd.equals(CustPwd)){
           String CFullName = rs.getString(1);
           String CMobNo = rs.getString(6);
        
@@ -55,7 +55,7 @@ public Customer findCustomer(String CustEmail, String CustPwd) throws SQLExcepti
 }
 //Add a customer-data into the database   
 public void addCustomer(String CustFullName, String CustEmail, String CustPwd, String CustShippingAddr, String CustAccess, String CustMobNo) throws SQLException {                   //code for add-operation       
-  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS VALUES('"+ CustFullName +" ','"+ CustEmail +" ','"+ CustPwd +"', '"+ CustShippingAddr +"' , '" + CustAccess +"', '"+ CustMobNo +"')");   
+  st.executeUpdate("INSERT INTO ROOT.CUSTOMERS (CUSTFULLNAME, CUSTEMAIL, CUSTPWD,CUSTSHIPPINGADD, CUSTACCESS, CUSTMOBNO) VALUES('"+ CustFullName +" ','"+ CustEmail +" ','"+ CustPwd +"', '"+ CustShippingAddr +"' , '" + CustAccess +"', '"+ CustMobNo +"')");   
   //st.executeUpdate("INSERT INTO ROOT.TEST VALUES('name1','password1')");  
 }
 

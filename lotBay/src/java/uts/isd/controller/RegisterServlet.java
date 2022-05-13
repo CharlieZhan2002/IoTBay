@@ -39,7 +39,7 @@ public class RegisterServlet extends HttpServlet {
             HttpSession session = request.getSession();
             Validator validator = new Validator(); 
 //            
-//            Customer customer = null;
+            Customer customer = null;
             String regEmail = request.getParameter("email");
             String regFullName = request.getParameter("fullname");
             String regPwd = request.getParameter("password");

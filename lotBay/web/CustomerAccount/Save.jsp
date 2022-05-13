@@ -15,15 +15,15 @@
 </head>
 <body>
 <!<!-- ../index page/index.jsp -->
-
+     <form method="POST" action="../MainServlet">  
     <h1 class="cv_cb_tit">Details Updated</h1><br/>
     <div class="sv_cb"><br/><br/><br/><br/>
         <p class="sv_cb_subtit">Your details have been updated.</p>
         <p class="sv_cb_subtit">Click the button below to return to your profile.</p>
         </br>
-         <form method="POST" action="/lotBay/CustomerAccount/Customer View.jsp">  
+         
                 <input class="sv_cb_btn" type="submit" value="My profile"/>  
-        </form> 
+     </form> 
 
 </div>
 </body>

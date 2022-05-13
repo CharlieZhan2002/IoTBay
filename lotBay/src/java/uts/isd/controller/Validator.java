@@ -58,11 +58,11 @@ public class Validator implements Serializable{
     public void clear(HttpSession session){
         // set error attributes to show to user
         // reset validation messages after every event submission
-        session.setAttribute("emailErr", "Enter email");
-        session.setAttribute("passErr", "Enter password");
+        session.setAttribute("emailErr", "Email");
+        session.setAttribute("passErr", "Password");
         session.setAttribute("existErr", "");
-        session.setAttribute("nameErr", "Enter name");
-        session.setAttribute("phoneErr", "Enter phone");
+        session.setAttribute("nameErr", "Name");
+        session.setAttribute("phoneErr", "Phone");
     }
 }
   

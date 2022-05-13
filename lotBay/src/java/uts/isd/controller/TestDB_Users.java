@@ -9,6 +9,7 @@ import java.util.*;
 import java.util.logging.*;
 import uts.isd.model.dao.*;
 import uts.isd.model.Customer;
+import uts.isd.model.Staff;
  
 
 public class TestDB_Users {
@@ -29,6 +30,7 @@ DBManager db = new DBManager(conn);
 //db.addCustomer("Nina", "Ninaurr@email.com", "2232", " ", " ", "0432000000");
 //db.addCustomer("Etta", "Etta@email.com", "1111","","","0411000000");
 //db.addCustomer("test", "test@gmail.com","1234"," ","","0456789012");
+//db.addCustomer(CustFullName, CustEmail, CustPwd, CustShippingAddr, CustAccess, CustMobNo);
 //db.updateCustEmail("vox@gmail.com", "Vox@email.com");
 //db.updateCustName("testing","test@gmail.com");
 //db.updateCustMobNo("0478678678", "test@gmail.com");
@@ -62,8 +64,17 @@ String type = in.nextLine();
 //db.addUser( firstname, lastname,email,gender,dob,password,type,userid);
 //System.out.println(db.findUser("1").getFirstName());
 System.out.println("test item is added to the database.");*/
+//boolean c = db.checkStaffByEmail("sammi@email.com");
+//System.out.println("Result is = " + c);
+//db.addCustomer("Miko","Miko@email.com", "1234", "Australia", "1", "0456356256");
+// db.addStaff("Sam", "sam@email.com", "1234", "4", "0453245635");
+ 
+ Staff staff = db.findStaff("sam@email.com", "1234");
+ System.out.println(staff);
 
-connector.closeConnection();
+//Customer customer = db.findCustbyEmail("sammi@email.com");
+//System.out.println(customer);
+//connector.closeConnection();
 
  
 
