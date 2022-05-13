@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2022-3-30, 14:32:39
+    Author     : 12717
+*/
+::-webkit-scrollbar { width:0px; height:0px; }
+body{
+    background: url('Img_login_bg.jpg') no-repeat center center fixed;
+    text-align: center;
+}
+.m_tit{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: default;
+    animation-duration: 1.5s;
+    animation-name: ani1;
+}
+@keyframes ani1 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+.m_cb{
+    display:inline-block;
+    width: 900px;
+    height: 1000px;
+    border-radius: 30px;
+    background-color: rgba(36, 36, 36, 0.8);
+    box-shadow:0 0 10px gray;
+    animation-duration: 1.5s;
+    animation-name: ani2;
+}
+@keyframes ani2 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        background-color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+.m_cb_tit{
+    margin-bottom: 0px;
+    color: white;
+    font-size: 28px;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: default;
+}
+.m_cb_subtit{
+    color: white;
+    font-size: 15px;
+    cursor: default;
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 35px;
+}
+
+.m_cb_bk{
+    color: white;
+    font-size: 14px;
+    cursor:pointer;
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: underline;
+    margin-left: 250px;
+ }
+
+ .table_style{
+     color: white;
+     border-collapse: collapse;
+ }
+ 
+ .table_style td, .table_style th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table_style tr:hover {
+    background-color: #D3D3D3;
+    color: black;
+}
+
+.table_style th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #556B2F;
+  color: white;
+}
+
+.lg_cb_btn{
+    text-align: center;
+    font-size: 17px;
+    width: 150px;
+    height:44px;
+    border-radius: 20px;
+    border:2px solid #556B2F;
+    background-color: #556B2F;
+    color:white;
+    margin-top: 25px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+.lg_cb_btn:hover{
+    background-color: #D3D3D3;
+    color: black;
+    border:2px solid #D3D3D3;
+}
+
+.button_style{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lg_cb_iptit{
+    color: white;
+    text-align: center;
+    margin-left: 80px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 10px;
+}
+.lg_cb_ip{
+    text-align: center;
+    width: 600px;
+    height:8px;
+    border-radius: 20px;
+    border:2px solid rgb(1, 72, 204);
+    background-color: rgba(36, 36, 36, 0.8);
+    color:#999999;
+    text-align: left;
+    padding: 18px;
+}
+.lg_cb_ip:hover{
+    border:2px solid white;
+}

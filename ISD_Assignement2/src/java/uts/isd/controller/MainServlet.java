@@ -66,7 +66,7 @@ public class MainServlet extends HttpServlet {
                 // out.println(customer);
 
                 session.setAttribute("email", customer.getEmail());
-                session.setAttribute("password", customer.getEmail());
+                session.setAttribute("password", customer.getUserPassword());
                 session.setAttribute("name", customer.getFullName());
                 session.setAttribute("dob", customer.getDateOfBirth());
             }else{

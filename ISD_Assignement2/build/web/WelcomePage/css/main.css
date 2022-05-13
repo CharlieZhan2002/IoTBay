@@ -146,6 +146,25 @@ aside ul li{
 	}	
 }
 
+.lg_cb_btn{
+    text-align: center;
+    font-size: 17px;
+    width: 150px;
+    height:44px;
+    border-radius: 20px;
+    border:2px solid #556B2F;
+    background-color: #556B2F;
+    color:white;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+.lg_cb_btn:hover{
+    background-color: #D3D3D3;
+    color: black;
+    border:2px solid #D3D3D3;
+}
+
 
 
 

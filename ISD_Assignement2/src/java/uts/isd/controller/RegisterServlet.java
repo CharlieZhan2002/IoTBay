@@ -59,7 +59,7 @@ public class RegisterServlet extends HttpServlet {
                 //从数据库中取出的时间小于当前系统时间！直接添加重定向
                 // HttpSession session = request.getSession();
                 // session.setAttribute("login_email", email);
-                db.addCustomer(email, password, fullname, dateofbirth);
+                db.addCustomer(email, password, fullname, dateofbirth, null, null);
                 response.sendRedirect("/ISD_Assignement2/LoginPage/Login.jsp");
             } /* else if (Integer.parseInt(queryDate) == Integer.parseInt(date)) {
                 System.out.println("从数据库中取出的时间等于当前系统时间！");
@@ -70,40 +70,6 @@ public class RegisterServlet extends HttpServlet {
                 response.sendRedirect("/ISD_Assignement2/ErrorPage/ErrorRegister.jsp");
             }
 
-            /*
-            if (dob.before(dateFormat.parse(current_Date))){
-                // 如果dateOfBirth早于当前时间 就添加, 重定向
-                db.addCustomer(email, password, fullname, dateofbirth);
-                response.sendRedirect("/ISD_Assignement2/WelcomePage/Welcome.jsp");
-            }else {
-                // 创建失败的提醒
-                out.println("Failed to create, birthday is later than current date");
-            }
-            */
-
-            // 查
-            /*
-            Student songwen = db.findStudent("songwen-1@163.com", "233450");
-            System.out.println(songwen);
-
-            Student bob = db.findStudent("bob-1@163.com");
-            System.out.println(bob);
-
-            Customer test = db.findCustomer("test@.com");
-            System.out.println(test);
-            */
-            // System.out.println(db.findStudent(email, password));
-
-            // 增
-            //db.addCustomer("Jingsong@163.com", "110", "Jingsong" ,"2001-01-02");
-            // System.out.println("Successfully Add Data");
-
-            // 删
-            //db.deleteCustomer("Qingyun@163.com");
-
-            // 改
-            //db.updateCustomer("Jingsong@163.com", "suasua", "Jingsong Pang", "2001-01-02");
-            // System.out.println("Successfully Update Data");
             connector.closeConnection();
         } catch (ClassNotFoundException | SQLException ex) {
 

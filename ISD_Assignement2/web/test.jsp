@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <form action="newServlet" method="post">
+        <input type="submit" value="LOGIN"/>
+        </form>
         <h1><%=request.getAttribute("login_email")%></h1>
     </body>
 </html>

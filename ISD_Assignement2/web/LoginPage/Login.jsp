@@ -1,4 +1,4 @@
-<%-- 
+ <%-- 
     Document   : Login
     Created on : 2022年3月23日, 下午2:29:09
     Author     : yunwei zhang, etta wu
@@ -27,7 +27,11 @@
         <input class="lg_cb_ip" type="text" placeholder="Enter email" name="email" required="true">
         <p class="lg_cb_iptit">Your Password</p>
         <input class="lg_cb_ip" type="password" placeholder="Enter password"name="password" required="true">
-        <p class="lg_cb_fp">Forgot Password?</p>
+        </br></br>
+
+        <a class="lg_cb_fp" href="../LoginPage/Admin.jsp">System Admin Login</a>
+        </br></br>
+
         <a class="lg_cb_su" href="../RegisterPage/Register.jsp">Sign up</a>
         <br/>
         <input class="lg_cb_btn" type="submit" value="LOGIN"/>

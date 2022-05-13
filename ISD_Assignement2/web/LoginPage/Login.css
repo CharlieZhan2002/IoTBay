@@ -20,11 +20,11 @@ body{
         margin-left: 5%;
     }
     to {}
-  }
+}
 .lg_cb{
     display:inline-block;
     width: 400px;
-    height: 440px;
+    height: 460px;
     border-radius: 30px;
     background-color: rgba(36, 36, 36, 0.8);
     box-shadow:0 0 10px gray;
@@ -38,7 +38,7 @@ body{
         margin-left: 5%;
     }
     to {}
-  }
+}
 .lg_cb_tit{
     margin-bottom: 0px;
     color: white;

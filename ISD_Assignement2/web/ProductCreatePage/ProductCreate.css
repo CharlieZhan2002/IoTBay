@@ -1,0 +1,192 @@
+::-webkit-scrollbar { width:0px; height:0px; }
+body{
+    background: url('../LoginPage/Img_login_bg.jpg') no-repeat center center fixed;
+    text-align: center;
+}
+.pc_tit{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: default;
+    animation-duration: 1.5s;
+    animation-name: ani1;
+}
+@keyframes ani1 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+.pc_cb{
+    padding: 15px;
+    display:inline-block;
+    width: 500px;
+    height: 570px;
+    border-radius: 30px;
+    background-color: rgba(36, 36, 36, 0.8);
+    box-shadow:0 0 10px gray;
+    animation-duration: 1.5s;
+    animation-name: ani2;
+}
+@keyframes ani2 {
+    from {
+        color:rgba(255, 255, 255, 0);
+        background-color:rgba(255, 255, 255, 0);
+        margin-left: 5%;
+    }
+    to {}
+  }
+.pc_cb_tit{
+    margin-bottom: 0px;
+    color: white;
+    font-size: 28px;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: default;
+}
+.pc_cb_subtit{
+    color: white;
+    font-size: 15px;
+    cursor: default;
+    font-style: italic;
+    font-weight: 100;
+    margin-bottom: 35px;
+}
+.pc_cb_iptit{
+    color: white;
+    text-align: left;
+    margin-left: 80px;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 10px;
+}
+.pc_cb_ip{
+    text-align: center;
+    width: 250px;
+    height:28px;
+    border-radius: 20px;
+    border:2px solid rgb(1, 72, 204);
+    background-color: rgba(36, 36, 36, 0.8);
+    color:#999999;
+}
+.pc_cb_ip:hover{
+    border:2px solid white;
+}
+.pc_cb_btn{
+    text-align: center;
+    font-size: 17px;
+    width: 180px;
+    height:45px;
+    border-radius: 20px;
+    border:2px solid green;
+    background-color: rgba(36, 36, 36, 0.8);
+    color:white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.pc_cb_btn:hover{
+    background-color: rgba(4, 105, 4, 0.466);
+}
+.pc_cb_bk{
+    color: white;
+    font-size: 14px;
+    cursor:pointer;
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: underline;
+    margin-top: -10px;
+    margin-bottom: -20px;
+    margin-left: 420px;
+}
+.pc_cb_bk:hover{
+    color:gray;
+}
+.pc_cb_tb{
+    height: 280px;
+    margin-top: 20px;
+    padding:20px;
+    text-align: center;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+.pc_cb_tb_con{
+    border:2px solid black;
+    border-radius: 8px;
+}
+.pc_cb_tb_con th{
+    color:purple;
+    letter-spacing: 1px;
+    cursor: default;
+}
+.pc_cb_tb_con td{
+    font-size: 14px;
+    cursor: default;
+}
+.pc_cb_tb_con_data:hover{
+    background-color: #fafafa;
+}
+.pc_add_cb{
+    padding:10px;
+    margin-top: 10px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px
+}
+.pc_add_tb td input{
+    border-radius: 5px;
+    height: 28px;
+    border:0px solid;
+    
+}
+.pc_dn{
+    margin-top: 120px;
+    font-size: 35px;
+    color:white;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-bottom: 180px;
+}
+.pc_btn_dou{
+    color: white;
+    font-size: 14px;
+    cursor:pointer;
+    font-style: italic;
+    font-weight: 100;
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.pc_btn_dou:hover{
+    color:gray;
+}
+
+
+
+
+
+
+
+
+.pc_d_input{
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.pc_ud_input{
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+

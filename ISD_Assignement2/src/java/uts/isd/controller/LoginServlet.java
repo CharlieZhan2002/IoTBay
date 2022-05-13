@@ -44,19 +44,6 @@ public class LoginServlet extends HttpServlet {
             Connection conn = connector.openConnection();
             DBManager db = new DBManager(conn);
 
-            // 查
-            /*
-            Student songwen = db.findStudent("songwen-1@163.com", "233450");
-            System.out.println(songwen);
-
-            Student bob = db.findStudent("bob-1@163.com");
-            System.out.println(bob);
-
-            Customer test = db.findCustomer("test@.com");
-            System.out.println(test);
-            */
-            // System.out.println(db.findStudent(email, password));
-
             if (db.findCustomer(email, password) != null) {
                 // 向Welcome 页面传递数据
                 String login_email = request.getParameter("email");
@@ -66,8 +53,9 @@ public class LoginServlet extends HttpServlet {
                 
                 // request.getRequestDispatcher("/WelcomePage/Welcome.jsp").include(request, response);
                 HttpSession session = request.getSession();
-                session.setAttribute("login_email", login_email);
+                session.setAttribute("login_email", login_email);//Object
                 response.sendRedirect("/ISD_Assignement2/WelcomePage/Welcome.jsp");
+
             }else{
                 // db.findCustomer(email, password) 查出的的结果为空的话, 那就是意味着没有查到内容, 内容不存在. 
                 //out.println(db.findCustomer(email, password));

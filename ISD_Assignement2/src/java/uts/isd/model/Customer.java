@@ -7,6 +7,11 @@ public class Customer {
     private String userPassword;
     private String fullName;
     private String dateOfBirth;
+    private String gender;
+    private String address;
+
+    public Customer() {
+    }
 
     public Customer(String email, String userPassword, String fullName, String dateOfBirth) {
         this.email = email;
@@ -15,7 +20,13 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Customer() {
+    public Customer(String email, String userPassword, String fullName, String dateOfBirth, String gender, String address) {
+        this.email = email;
+        this.userPassword = userPassword;
+        this.fullName = fullName;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.address = address;
     }
 
     public String getEmail() {
@@ -50,6 +61,22 @@ public class Customer {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -57,6 +84,8 @@ public class Customer {
                 ", userPassword='" + userPassword + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }
