@@ -38,6 +38,7 @@ public class LogoutServlet extends HttpServlet {
         // String password = request.getParameter("password");
         HttpSession session = request.getSession();
         session.removeAttribute("login_email");
+
         response.sendRedirect("/ISD_Assignement2/index page/index.jsp");
         // out.println(email);
 

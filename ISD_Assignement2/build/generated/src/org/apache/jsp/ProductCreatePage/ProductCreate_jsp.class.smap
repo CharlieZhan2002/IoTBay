@@ -1,0 +1,16 @@
+SMAP
+ProductCreate_jsp.java
+JSP
+*S JSP
+*F
++ 0 ProductCreate.jsp
+ProductCreatePage/ProductCreate.jsp
+*L
+5,32:47
+37,5:80
+41,2:85
+43,5:87,3
+48,3:102
+50,3:105
+52,25:108
+*E

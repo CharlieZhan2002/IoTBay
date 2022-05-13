@@ -53,9 +53,11 @@
                     <!-- ../MainPage/Main.jsp -->
 <!--                    <a href="../MainServlet" target="_blank" method="post"><h2 align="center">Begin</h2></a>-->
                     <form action="../MainServlet" method="post">
-                        <h2 align="center"><input class="lg_cb_btn" type="submit" value="Begin"/></h2>
+                        <h2 align="center"><input class="lg_cb_btn" type="submit" value="My Profile"/></h2>
                     </form>
-
+                    <form action="../ShowProductPage/ShowProduct.jsp" method="post">
+                        <h2 align="center"><input class="lg_cb_btn" type="submit" value="Purchase Product"/></h2>
+                    </form>
                     <article>
                         <p>Please follow us</p>
                         <time datetime="2022-03-31">1 Hour ago</time>
